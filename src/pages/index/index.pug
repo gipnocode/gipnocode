@@ -1,0 +1,19 @@
+extends ../../layout/main/main
+include ../../blocks/menu/menu
+block variables
+  - let title = 'Toxin';
+  - let pageClass = 'index-page';
+  - let containerName = 'container-index'
+block content
+  div.index-list-wraper
+    ul.index-list
+      +menu('landing.html','Landing')
+      +menu('registration.html','Registration')
+      +menu('signin.html','Sign in')
+      +menu('room-details.html','Room details')
+      +menu('ui.html','Ui Kit')
+
+
+
+
+

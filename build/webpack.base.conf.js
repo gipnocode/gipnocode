@@ -3,12 +3,15 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+var PrettierPlugin = require("prettier-webpack-plugin");
+// const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  assets: 'assets/'
-
+  // fonts: 'fonts/'
+  publicPath: '/fsd/'
 };
 
 
@@ -52,6 +55,44 @@ module.exports = {
       loader: 'pug-loader',
 
     },
+      {
+        test: /\.(png|jpg|gif|svg|ico)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }
+      },
+//       {
+//   test: /\.(gif|png|jpe?g|svg)$/i,
+//   use: [
+//     'file-loader',
+//     {
+//       loader: 'image-webpack-loader',
+//       options: {
+//         mozjpeg: {
+//           progressive: true,
+//           quality: 65
+//         },
+//         // optipng.enabled: false will disable optipng
+//         optipng: {
+//           enabled: false,
+//         },
+//         pngquant: {
+//           quality: [0.65, 0.90],
+//           speed: 4
+//         },
+//         gifsicle: {
+//           interlaced: false,
+//         },
+//         // the webp option will enable WEBP
+//         webp: {
+//           quality: 75
+//         }
+//       }
+//     },
+//   ],
+// }
+
       {
       test: /\.js$/,
       loader: 'babel-loader',
@@ -117,7 +158,11 @@ module.exports = {
 
     new CopyWebpackPlugin([
       // { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
+      { from: `${PATHS.src}/pages/landing/landing1.jpg`, to: `img` },
+      { from: `${PATHS.src}/pages/registration/image 4.jpg`, to: `img` },
+      { from: `${PATHS.src}/pages/room-details/`, to: `img` },
+
+      { from: `${PATHS.src}/${PATHS}fonts`, to: `${PATHS}fonts` },
       { from: `${PATHS.src}/static`, to: '' },
     ]),
 

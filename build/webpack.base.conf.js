@@ -4,19 +4,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-var PrettierPlugin = require("prettier-webpack-plugin");
-// const StylelintPlugin = require('stylelint-webpack-plugin');
+let PrettierPlugin = require("prettier-webpack-plugin");
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  // fonts: 'fonts/'
-  publicPath: '/fsd/'
 };
 
-
-// const PAGES_DIR = path.resolve(__dirname, '../src/pages');
-// const PAGES = fs.readdirSync(PAGES_DIR);
 const PAGES_DIR1 = `${PATHS.src}/pages/index`;
 const PAGES1 = fs.readdirSync(PAGES_DIR1).filter(fileName => fileName.endsWith('.pug'));
 
@@ -41,12 +35,14 @@ module.exports = {
   },
   entry: {
     app: PATHS.src,
+    vendors: [
+      "webpack-material-design-icons"
+    ]
 
   },
   output: {
     filename: `[name].[hash].js`,
     path: PATHS.dist,
-
   },
 
   module: {
@@ -60,39 +56,9 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]'
-        }
-      },
-//       {
-//   test: /\.(gif|png|jpe?g|svg)$/i,
-//   use: [
-//     'file-loader',
-//     {
-//       loader: 'image-webpack-loader',
-//       options: {
-//         mozjpeg: {
-//           progressive: true,
-//           quality: 65
-//         },
-//         // optipng.enabled: false will disable optipng
-//         optipng: {
-//           enabled: false,
-//         },
-//         pngquant: {
-//           quality: [0.65, 0.90],
-//           speed: 4
-//         },
-//         gifsicle: {
-//           interlaced: false,
-//         },
-//         // the webp option will enable WEBP
-//         webp: {
-//           quality: 75
-//         }
-//       }
-//     },
-//   ],
-// }
+        },
 
+      },
       {
       test: /\.js$/,
       loader: 'babel-loader',
@@ -103,13 +69,12 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: 'assets/icons',
       }
     },
-
-
       {
-      test: /\.sass$/,
+      test: /\.scss$/,
       use: [
         'style-loader',
         MiniCssExtractPlugin.loader,
@@ -149,7 +114,6 @@ module.exports = {
     }
   },
   plugins: [
-    // [new StylelintPlugin(options)],
     new PrettierPlugin(),
     new MiniCssExtractPlugin({
       filename: `[name].[hash].css`,
@@ -157,13 +121,14 @@ module.exports = {
     // new CleanWebpackPlugin(),
 
     new CopyWebpackPlugin([
-      // { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/pages/landing/landing1.jpg`, to: `img` },
-      { from: `${PATHS.src}/pages/registration/image 4.jpg`, to: `img` },
-      { from: `${PATHS.src}/pages/room-details/`, to: `img` },
 
-      { from: `${PATHS.src}/${PATHS}fonts`, to: `${PATHS}fonts` },
-      { from: `${PATHS.src}/static`, to: '' },
+      { from: `${PATHS.src}/pages/landing/img`, to: `assets/img` },
+      { from: `${PATHS.src}/pages/registration/img`, to: `assets/img` },
+      { from: `${PATHS.src}/pages/room-details/img`, to: `assets/img` },
+
+      { from: `${PATHS.src}/fonts/`, to: `assets/fonts` },
+
+      { from: `${PATHS.src}/static`, to: 'assets/static' },
     ]),
 
 

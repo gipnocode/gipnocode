@@ -1,0 +1,28 @@
+@import "src/theme/normalize";
+@import "src/theme/vars";
+@import "src/theme/fonts";
+//@import "node_modules/material-icons/iconfont/material-icons.scss";
+//@import "../../pages/index/index"
+@import "src/pages/landing/landing";
+@import "src/pages/registration/registration";
+//@import "src/blocks/menu/menu"
+html {
+  box-sizing: border-box;
+}
+
+body {
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+p {
+  font-family: var(--first-font);
+}
+.material-icons {
+  font-family: var(--fifth-font);
+}

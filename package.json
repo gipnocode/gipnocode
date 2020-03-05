@@ -4,9 +4,12 @@
   "description": "My starter kit",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --open  --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "style": "npx stylelint \"**/*.scss\"",
+    "preprod": "node ./build/webpack.config.prod.js",
+    "prod": "npm webpack"
   },
   "browserslist": [
     "> 1%",
@@ -38,12 +41,22 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
+    "stylelint-scss": "^3.3.2",
+    "url-loader": "^3.0.0",
+    "webp-loader": "^0.6.0",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3",
+    "webpack-material-design-icons": "^0.1.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "npm": "^6.13.7"
+    "material-icons": "^0.3.1",
+    "npm": "^6.14.1",
+    "stylelint-config-sass-guidelines": "^7.0.0"
+
   }
 }

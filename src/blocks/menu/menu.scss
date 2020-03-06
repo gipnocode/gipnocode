@@ -3,13 +3,15 @@
   flex-direction: column;
   margin: 0 auto;
 }
+
 .index-item {
   align-content: space-between;
   padding: 1.5em;
 }
+
 .index-link {
-  text-transform: uppercase;
   color: var(--color1);
-  font-family: var(--first-font);
+  text-transform: uppercase;
   font-size: var(--text-xl);
+  font-family: var(--first-font);
 }

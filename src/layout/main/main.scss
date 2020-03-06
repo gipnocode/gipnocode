@@ -5,9 +5,11 @@
 @import "src/pages/landing/landing";
 @import "src/pages/registration/registration";
 @import "src/blocks/menu/menu";
+
 html {
   box-sizing: border-box;
 }
+
 a {
   text-decoration: none;
 }
@@ -15,7 +17,7 @@ a {
 ul {
   list-style-type: none;
 }
+
 p {
   font-family: var(--first-font);
 }
-

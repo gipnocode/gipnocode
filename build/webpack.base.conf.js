@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -9,25 +10,11 @@ let PrettierPlugin = require("prettier-webpack-plugin");
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
+
 };
+const PAGES_DIR = path.resolve(__dirname, '../src/pages');
+const PAGES = fs.readdirSync(PAGES_DIR);
 
-const PAGES_DIR1 = `${PATHS.src}/pages/index`;
-const PAGES1 = fs.readdirSync(PAGES_DIR1).filter(fileName => fileName.endsWith('.pug'));
-
-const PAGES_DIR2 = `${PATHS.src}/pages/landing`;
-const PAGES2 = fs.readdirSync(PAGES_DIR2).filter(fileName => fileName.endsWith('.pug'));
-//
-const PAGES_DIR3 = `${PATHS.src}/pages/registration`;
-const PAGES3 = fs.readdirSync(PAGES_DIR3).filter(fileName => fileName.endsWith('.pug'));
-//
-const PAGES_DIR4 = `${PATHS.src}/pages/signin`;
-const PAGES4 = fs.readdirSync(PAGES_DIR4).filter(fileName => fileName.endsWith('.pug'));
-
-const PAGES_DIR5 = `${PATHS.src}/pages/room-details`;
-const PAGES5 = fs.readdirSync(PAGES_DIR5).filter(fileName => fileName.endsWith('.pug'));
-
-const PAGES_DIR6 = `${PATHS.src}/pages/ui`;
-const PAGES6 = fs.readdirSync(PAGES_DIR6).filter(fileName => fileName.endsWith('.pug'));
 module.exports = {
 
   externals: {
@@ -119,7 +106,10 @@ module.exports = {
       filename: `[name].[hash].css`,
     }),
     // new CleanWebpackPlugin(),
-
+    ...PAGES.map((page) => new HtmlWebpackPlugin({
+      filename: `${page}.html`,
+      template: `${PAGES_DIR}/${page}/${page}.pug`,
+    })),
     new CopyWebpackPlugin([
 
       { from: `${PATHS.src}/pages/landing/img`, to: `assets/img` },
@@ -132,29 +122,6 @@ module.exports = {
     ]),
 
 
-    ...PAGES1.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR1}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
-    ...PAGES2.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR2}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
-    ...PAGES3.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR3}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
-    ...PAGES4.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR4}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
-    ...PAGES5.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR5}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
-    ...PAGES6.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR6}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
+
   ],
 };

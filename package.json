@@ -10,15 +10,6 @@
     "style": "npx stylelint \"**/*.scss\"",
     "clean-source": "rimraf README.md src webroot package.json"
   },
-  "gh-pages-deploy": {
-  "staticpath": "dist",
-
-
-  "post": [
-    "clean-source"
-  ],
-  "noprompt": false
-},
   "browserslist": [
     "> 1%",
     "last 3 version"

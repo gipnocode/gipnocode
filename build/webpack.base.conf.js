@@ -42,8 +42,10 @@ module.exports = {
         test: /\.(png|jpg|gif|svg|ico)$/,
         loader: 'file-loader',
         options: {
-          name: '[name].[ext]'
+          name: '[name].[ext]',
+
         },
+
 
       },
       {
@@ -57,7 +59,8 @@ module.exports = {
       loader: 'file-loader',
       options: {
         name: '[name].[ext]',
-        outputPath: 'assets/icons',
+        outputPath: 'assets/fonts'
+
       }
     },
       {
@@ -111,7 +114,7 @@ module.exports = {
       template: `${PAGES_DIR}/${page}/${page}.pug`,
     })),
     new CopyWebpackPlugin([
-
+      //
       { from: `${PATHS.src}/pages/landing/img`, to: `assets/img` },
       { from: `${PATHS.src}/pages/registration/img`, to: `assets/img` },
       { from: `${PATHS.src}/pages/room-details/img`, to: `assets/img` },

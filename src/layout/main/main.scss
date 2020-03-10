@@ -1,13 +1,6 @@
-@import "src/theme/normalize";
-@import "src/theme/vars";
-@import "src/theme/fonts";
-@import "src/pages/index/index";
-@import "src/pages/landing/landing";
-@import "src/pages/registration/registration";
-@import "src/blocks/menu/menu";
-
 html {
   box-sizing: border-box;
+  font-size: 1em;
 }
 
 a {

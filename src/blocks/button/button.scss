@@ -1,6 +1,6 @@
 .button {
   //padding: 14px 21px 15px 19px;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   color: #fff;
   text-transform: uppercase;
   font-size: var(--text-sm);
@@ -16,8 +16,11 @@
     color: var(--color6);
   }
   &_size1 {
-    padding: 9px 19px 10px 20px;
+    padding: 0.5625rem 1.1875rem 0.625rem 1.25rem;
   }
+  //&_size1-long {
+  //  padding: 9px 19px 10px 20px;
+  //}
 
   &_border {
     width: 100%;
@@ -36,8 +39,8 @@
   }
 
   &_long {
-    padding: 14px 20px 15px 20px;
-    width: 320px;
+    padding: 0.875rem 1.25rem 0.9375rem 1.25rem;
+    width: 20rem;
     background-color: #1f2041;
   }
   &_opasity {
@@ -45,10 +48,10 @@
   }
 }
 .rounded-corners-gradient-borders {
-  width: 101px;
-  height: 44px;
+  width: 6.3125rem;
+  height: 2.75rem;
   border: double 2px transparent;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #bc9cff, #8ba4f9);
   background-origin: border-box;
@@ -56,10 +59,10 @@
 }
 
 .header-rounded-corners-gradient-borders {
-  width: 87px;
-  height: 30px;
+  width: 5.3125rem;
+  height: 1.875rem;
   border: double 2px transparent;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #bc9cff, #8ba4f9);
   background-origin: border-box;
@@ -67,10 +70,10 @@
 }
 
 .header-rounded-corners-gradient-borders-big {
-  width: 196px;
-  height: 30px;
+  width: 12rem;
+  height: 1.875rem;
   border: double 2px transparent;
-  border-radius: 22px;
+  border-radius: 1.375rem;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #bc9cff, #bc9cff);
   background-origin: border-box;

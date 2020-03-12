@@ -1,5 +1,5 @@
 .button {
-  padding: 14px 21px 15px 19px;
+  //padding: 14px 21px 15px 19px;
   border-radius: 22px;
   color: #fff;
   text-transform: uppercase;
@@ -15,6 +15,10 @@
     background-color: var(--color8);
     color: var(--color6);
   }
+  &_size1 {
+    padding: 9px 19px 10px 20px;
+  }
+
   &_border {
     width: 100%;
     height: 100%;
@@ -22,6 +26,15 @@
     color: var(--color6);
     border: transparent;
   }
+
+  &_border-big {
+    width: 100%;
+    height: 100%;
+    background-color: #bc9cff;
+    border: transparent;
+    color: var(--color8);
+  }
+
   &_long {
     padding: 14px 20px 15px 20px;
     width: 320px;
@@ -38,6 +51,28 @@
   border-radius: 22px;
   background-image: linear-gradient(white, white),
     radial-gradient(circle at top left, #bc9cff, #8ba4f9);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.header-rounded-corners-gradient-borders {
+  width: 87px;
+  height: 30px;
+  border: double 2px transparent;
+  border-radius: 22px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #bc9cff, #8ba4f9);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.header-rounded-corners-gradient-borders-big {
+  width: 196px;
+  height: 30px;
+  border: double 2px transparent;
+  border-radius: 22px;
+  background-image: linear-gradient(white, white),
+    radial-gradient(circle at top left, #bc9cff, #bc9cff);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }

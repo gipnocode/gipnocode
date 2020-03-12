@@ -1,17 +1,22 @@
 extends ../../layout/main/main
-include ../../blocks/button/button
-include ../../blocks/menu/menu
+
 block variables
   - let pageClass = 'index-page';
   - let containerName = 'container-index'
 block content
-  div.index-list-wraper
-    ul.index-list
-      +menu('landing.html','Landing')
-      +menu('registration.html','Registration')
-      +menu('signin.html','Sign in')
-      +menu('room-details.html','Room details')
-      +menu('ui.html','Ui Kit')
+  nav.index-nav
+    ul.index-nav-list
+      li.index-nav-item
+        a.index-nav-link(href="landing.html") Landing
+      li.index-nav-item
+        a.index-nav-link(href="registration.html") Registration page
+      li.index-nav-item
+        a.index-nav-link(href="room-details.html") Gallery
+      li.index-nav-item
+        a.index-nav-link(href="signin.html") Singn in
+      li.index-nav-item
+        a.index-nav-link(href="ui.html") Ui Kit
+
 
 
 

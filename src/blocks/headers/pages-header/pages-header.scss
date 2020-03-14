@@ -1,7 +1,7 @@
 .pages-header-wrapper {
   width: 100%;
   background-color: var(--color8);
-  box-shadow: 0 10 20 var(--color5);
+  box-shadow: 0px 10px 20px rgba(var(--color-primary), var(--opasity-005));
   padding: 0.8125rem 0;
 }
 
@@ -11,25 +11,20 @@
   align-items: center;
   margin: 0 auto;
   width: 84.8%;
-  //width: 1160px;
-  //background-color: green;
 }
 
 .pages-header-nav {
   display: flex;
   justify-content: space-between;
   width: 66.2%;
-  //width: 768px;
-  //background-color: aqua;
 }
 
 .pages-header-nav-list {
-  //width: 446px;
   width: 58.07%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //background-color: red;
+  background-color: red;
 }
 
 .pages-header-nav-link {
@@ -38,22 +33,15 @@
   font-weight: normal;
   font-size: 0.875rem;
   line-height: 1.0625rem;
-  color: rgba(31, 32, 65, 0.5);
+  color: rgba(var(--color-primary), var(--opasity-05));
 }
 .pages-header-nav-item {
   display: flex;
   align-items: center;
 }
-.header-button-wrapp {
+.pages-header-button-wrapp {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 39.5%;
-  //margin-left: 25px;
-  //width: 303px;
-  //background-color: yellow;
 }
-
-//.pages-header-logo {
-//  margin-left: 14px;
-//}

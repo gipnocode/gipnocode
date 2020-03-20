@@ -1,0 +1,27 @@
+include ../../button/button
+
+div.ui-header-wrapper
+ header.ui-header
+  a.ui-header-logo(href="landing.html")
+   img.logo(src='assets/img/logo.svg')
+  nav.ui-header-nav
+   ul.ui-header-nav-list
+    li.ui-header-nav-item
+     a.ui-header-nav-link-first(href="/mock address/") Home
+    li.ui-header-nav-item
+     a.ui-header-nav-link(href="/mock address/") About Us
+    li.ui-header-nav-item
+     a.ui-header-nav-link(href="/mock address/") Services
+     i.material-icons expand_more
+    li.ui-header-nav-item
+     a.ui-header-nav-link(href="/mock address/") Careers
+    li.ui-header-nav-item
+     a.ui-header-nav-link(href="/mock address/") News
+    li.ui-header-nav-item
+     a.ui-header-nav-link(href="/mock address/") Documentation
+
+   div.ui-header-button
+    div.header-rounded-corners-gradient-borders
+     +button({lineTitle: 'login', mods: 'style2, border'})
+    div.header-rounded-corners-gradient-borders
+     +button({lineTitle: 'register', mods: 'style1, border-big'})

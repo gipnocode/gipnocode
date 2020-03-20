@@ -1,13 +1,13 @@
 .index-page {
-  background-color: var(--color5);
+  margin-top: 6vh;
+  background-color: rgba(var(--color-primary), var(--opasity-005));
 }
 
 .index-nav {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  width: 20%;
-  box-shadow: var(--color5);
+  width: 30%;
 }
 
 .index-nav-list {
@@ -21,6 +21,6 @@
 
 .index-nav-link {
   color: var(--color1);
-  font-size: 20px;
+  font-size: var(--text-lg);
   font-family: var(--second-font);
 }

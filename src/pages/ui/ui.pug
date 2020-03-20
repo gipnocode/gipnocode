@@ -1,9 +1,10 @@
-extends ../../layout/main/main
+extends ../../layout/plain-main
 include ../../blocks/button/button
 block variables
  - let pageClass = 'ui-page';
  - let containerName = 'ui-container'
 block content
+ include ../../blocks/headers/ui-header/ui-header
   div.button-stn-wrapp
     +button({lineTitle: 'CLICK ME', mods: 'style1'})
     +button({lineTitle: 'CLICK ME', mods: 'style1, opasity'})
@@ -12,6 +13,8 @@ block content
      +button({lineTitle: 'CLICK ME', mods: 'border'})
     div.rounded-corners-gradient-borders.button_opasity
      +button({lineTitle: 'CLICK ME', mods: 'border'})
+
+
      //+button({lineTitle: 'CLICK ME', mods: 'border'})
     //+button({lineTitle: 'CLICK ME', mods: 'style2'})
   //div.button-long-wrapp

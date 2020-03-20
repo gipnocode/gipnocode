@@ -1,9 +1,36 @@
 include ../../button/button
 
+//div.pages-header-wrapper
+//  header.pages-header
+//    a.pages-header-logo(href="landing.html")
+//      img.logo(src='assets/img/logo.svg')
+//    nav.pages-header-nav
+//      ul.pages-header-nav-list
+//        li.pages-header-nav-item
+//          a.pages-header-nav-link(href="/mock address/") О нас
+//        li.pages-header-nav-item
+//          a.pages-header-nav-link(href="/mock address/") Услуги
+//          i.material-icons expand_more
+//        li.pages-header-nav-item
+//          a.pages-header-nav-link(href="/mock address/") Вакансии
+//        li.pages-header-nav-item
+//          a.pages-header-nav-link(href="/mock address/") Новости
+//        li.pages-header-nav-item
+//          a.pages-header-nav-link(href="/mock address/") Соглашения
+//          i.material-icons expand_more
+//
+//      div.pages-header-button
+//        div.header-rounded-corners-gradient-borders
+//          +button({lineTitle: 'войти', mods: 'style2, border'})
+//        div.header-rounded-corners-gradient-borders-big
+//          +button({lineTitle: 'зарегистрироваться', mods: 'style1, border-big'})
 div.pages-header-wrapper
-  header.header-wrapper
-    a.pages-header-logo(href="landing.html")
-      img.logo(src='assets/img/logo.svg')
+  header.pages-header
+    div.mob-header
+      include ../../logo/logo
+      div.pages-header-log
+        span.pages-header-login Войти
+        span.pages-header-login Зарегистрироваться
     nav.pages-header-nav
       ul.pages-header-nav-list
         li.pages-header-nav-item
@@ -18,8 +45,7 @@ div.pages-header-wrapper
         li.pages-header-nav-item
           a.pages-header-nav-link(href="/mock address/") Соглашения
           i.material-icons expand_more
-
-      div.header-button-wrapp
+      div.pages-header-button
         div.header-rounded-corners-gradient-borders
           +button({lineTitle: 'Войти', mods: 'style2, size1, border'})
         div.header-rounded-corners-gradient-borders-big

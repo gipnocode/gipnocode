@@ -1,46 +1,163 @@
-.pages-header-wrapper {
-  padding: 0.8125rem 0;
-  width: 100%;
-  background-color: var(--color8);
-  box-shadow: 0 10px 20 rgba(var(--color-primary), var(--opasity-005));
-}
-
-.pages-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 85.89%;
-}
-
-.pages-header-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 66.3%;
-}
-
-.pages-header-nav-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 58%;
-}
+@import "../../../theme/mixins";
+$nav-height: 2.2em;
+$nav-scrollbar-height: 1em;
 
 .pages-header-nav-link {
   color: rgba(var(--color-primary), var(--opasity-05));
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   font-family: var(--first-font);
 }
 
-.pages-header-nav-item {
-  display: flex;
-  align-items: center;
+.pages-header-wrapper {
+  min-width: 100%;
+  margin: 0 auto;
+  background-color: var(--color8);
+  box-shadow: 0px 10px 20px rgba(var(--color-primary), var(--opasity-005));
+}
+@media (max-width: 991px) {
+  .pages-header {
+    padding: 0.8em 0.7em 0em 0.7em;
+  }
+  @include breakpoint(tablet) {
+    .pages-header {
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
+  .pages-header-nav {
+    position: relative;
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+  }
+  @include breakpoint(tablet) {
+    .pages-header-nav {
+      width: 580px;
+      margin: 0 auto;
+    }
+  }
+  .pages-header-nav-list {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    margin: 0 auto;
+    align-items: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    @media (pointer: coarse) {
+      //Переместить полосу прокрутки за область видимости,
+      //делая элемент выше, чем родительский элемент
+      height: $nav-height + $nav-scrollbar-height;
+    }
+  }
+  @include breakpoint(tablet) {
+    .pages-header-nav-list {
+      width: 600px;
+      margin: 0 auto;
+      justify-content: space-between;
+    }
+  }
+  .pages-header-nav-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+
+    &:not(:first-child) {
+      margin-left: 2em;
+    }
+  }
+
+  .pages-header-nav-link {
+    display: inline-flex;
+    height: $nav-height;
+    align-items: center;
+
+    &.is-active {
+      font-weight: bold;
+    }
+  }
+
+  .mob-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pages-header-log {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12.5rem;
+    font-weight: bold;
+    font-size: var(--text-sm);
+    font-family: var(--first-font);
+    color: var(--color6);
+  }
+  @media (min-width: 360px) {
+    .pages-header-log {
+      width: 14rem;
+    }
+  }
+  .pages-header-button {
+    display: none;
+  }
 }
 
-.pages-header-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 39.54%;
+@include breakpoint(middle) {
+  .pages-header-log {
+    display: none;
+  }
+}
+
+@include breakpoint(middle) {
+  .pages-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0.5rem;
+  }
+  @include breakpoint(large) {
+    .pages-header {
+      margin: 0 auto;
+      padding: 0.8rem 0;
+      width: 1160px;
+    }
+  }
+}
+
+@include breakpoint(middle) {
+  .pages-header-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 46rem;
+  }
+}
+@include breakpoint(large) {
+  .pages-header-nav {
+    width: 66%;
+  }
+}
+
+@include breakpoint(middle) {
+  .pages-header-nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 58%;
+  }
+}
+
+@include breakpoint(middle) {
+  .pages-header-nav-item {
+    display: flex;
+    align-items: center;
+  }
+}
+@include breakpoint(middle) {
+  .pages-header-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 39.5%;
+  }
 }

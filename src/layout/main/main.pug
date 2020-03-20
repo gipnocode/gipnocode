@@ -1,13 +1,21 @@
 block variables
+
 doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Toxin
     block head
+
   body(class=pageClass)
-    block content
-      div(class='containerName')
+    include ../../blocks/headers/pages-header/pages-header
+
+  include ../../blocks/pages-footer/pages-footer
+  block content
+
+
+
 
 
 

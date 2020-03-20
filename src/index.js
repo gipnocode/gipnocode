@@ -1,4 +1,12 @@
-// import "./layout/main/main.scss";
+import "@fortawesome/fontawesome-free/js/fontawesome";
+import "@fortawesome/fontawesome-free/js/solid";
+import "@fortawesome/fontawesome-free/js/regular";
+import "@fortawesome/fontawesome-free/js/brands";
+
+library.add(fas, far, fab);
+
+dom.i2svg();
+
 function importAll(resolve) {
   resolve.keys().forEach(resolve);
 }

@@ -1,0 +1,60 @@
+//https://www.webslake.com/article/creating-a-toggle-button-using-html-and-css-without-any-javascript/
+
+#cover {
+  width: 40px;
+  height: 20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#checkbox {
+  margin: 0px;
+  width: 100%;
+  height: 20px;
+  cursor: pointer;
+  opacity: 0;
+  position: relative;
+  z-index: 3;
+}
+
+#bar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#knob {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  width: 12px;
+  height: 12px;
+  background: rgba(31, 32, 65, 0.25);
+  border-radius: 50%;
+  transition: left 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28),
+    margin-left 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
+  box-shadow: 0px 1px 1px #7d7d7d;
+  z-index: 2;
+}
+
+#checkbox:active ~ #knob {
+  width: 18px;
+}
+
+#checkbox:checked ~ #knob {
+  left: 25px;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+}
+
+#checkbox:checked ~ #bar {
+  border: 1px solid #bc9cff;
+}
+
+#checkbox:checked:active ~ #knob {
+  margin-left: -20px;
+}

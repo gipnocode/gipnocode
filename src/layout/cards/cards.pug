@@ -1,0 +1,18 @@
+include ../../blocks/info/info
+
+mixin card({image, righthead, righttext, tophead, toptext,bottomhead, bottomtext})
+ div.card
+  div.card-img-wrapper
+   img(src=(`assets/img/${image}`), alt="apartment photo")
+   i.material-icons.material-icons-left chevron_left
+   i.material-icons.material-icons-right chevron_right
+   div.circle-wrapper
+    div.round
+    div.round
+    div.round
+    div.round
+  +info({righthead:righthead, righttext:righttext, tophead:tophead,
+    toptext: toptext, bottomhead:bottomhead, bottomtext: bottomtext})
+  include ../../blocks/rate/rate
+
+

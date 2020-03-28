@@ -1,3 +1,4 @@
+include ../../input/input
 div.pages-footer-wrapper
  footer.pages-footer
   div.footer-logo
@@ -47,9 +48,11 @@ div.pages-footer-wrapper
       a.pages-footer-nav-link(href="/mock address/") связь с нами
 
   div.footer-subscribe
-    span.ui-footer--subs подписка
+    span.ui-footer-nav-link-first подписка
     p.
       получайте специальные предложения и новости сервиса
+    +input-field({placeholder: 'Email'})
+     span.material-icons arrow_forward
     div.way_icon
      i.fab.fa-twitter
      i.fab.fa-facebook-f

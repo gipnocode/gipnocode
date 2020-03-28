@@ -43,17 +43,9 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-
+          // outputPath: 'assets/img',
         },
-
-
       },
-      {
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: '/node_modules/'
-    },
-
       {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
@@ -63,6 +55,11 @@ module.exports = {
 
       }
     },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: '/node_modules/'
+      },
       {
       test: /\.scss$/,
       use: [
@@ -114,11 +111,13 @@ module.exports = {
       template: `${PAGES_DIR}/${page}/${page}.pug`,
     })),
     new CopyWebpackPlugin([
-      //
+
       { from: `${PATHS.src}/pages/landing/img`, to: `assets/img` },
       { from: `${PATHS.src}/pages/registration/img`, to: `assets/img` },
       { from: `${PATHS.src}/pages/room-details/img`, to: `assets/img` },
       { from: `${PATHS.src}/blocks/logo/logo.svg`, to: `assets/img` },
+      { from: `${PATHS.src}/layout/cards/img`, to: `assets/img` },
+      { from: `${PATHS.src}/blocks/info/img`, to: `assets/img` },
 
       { from: `${PATHS.src}/fonts/`, to: `assets/fonts` },
 

@@ -1,4 +1,4 @@
-@import "src/theme/fonts";
+@import "../../theme/fonts";
 .pages-footer-wrapper {
   margin-top: 135vh;
   width: 100%;
@@ -29,7 +29,7 @@
   display: grid;
 }
 .pages-footer-nav-list {
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(3, 1fr);
 }
 .col1 {
   display: inline-flex;

@@ -1,0 +1,23 @@
+mixin input-field(props = {})
+ -
+  const {mods, placeholder, moduleID, readonly} = props
+  var attributes = {}
+  if (moduleID !== 'undefined' && moduleID) {
+   attributes.id = moduleID
+  }
+  let allMods = ''
+  if (typeof(mods) !== 'undefined' && mods) {
+   let modList = mods.split(',')
+   for (let i=0; i < modList.length; i++) {
+    allMods = allMods + ' input-field_' + modList[i].trim()
+   }
+  }
+
+ input.input-field(
+  class = allMods,
+  placeholder = placeholder || '',
+  type= 'text',
+  autocomplete= "off",
+ )&attributes(attributes)
+
+

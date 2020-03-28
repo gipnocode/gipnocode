@@ -1,0 +1,29 @@
+mixin info(info)
+ .info
+  div.info-left
+   span.info_left-num= info.righthead
+   span.info_left-text= info.righttext
+  div.info_top
+   span.info_number= info.tophead
+   span.info_text= info.toptext
+  div.info_bottom
+   span.info_number= info.bottomhead
+   span.info_bottom-text= info.bottomtext
+
+mixin icon-info(info)
+ .icon-info
+  div.icon-info-left
+   span.material-icons= info.righthead
+  div.icon-info_right
+   div.info_number= info.tophead
+   div.info_bottom-text= info.bottomtext
+
+mixin comment-info(info)
+ .icon-info
+  div.icon-info-left
+   img(src=(`assets/img/${info.image}`), alt="apartment photo")
+  div.icon-info_right
+   div.info_number= info.tophead
+   div.info_bottom-text= info.bottomtext
+
+

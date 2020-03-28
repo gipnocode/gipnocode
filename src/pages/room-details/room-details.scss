@@ -1,0 +1,15 @@
+.room-details-page {
+  width: 1160px;
+  margin: 0 auto;
+}
+.room-image-wrapper {
+  display: grid;
+  grid-template-columns: 68.4% 31.6%;
+}
+.second {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.comment-section-wrapper {
+  //margin-top: 60px;
+  padding: 3em;
+}

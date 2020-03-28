@@ -1,5 +1,30 @@
 extends ../../layout/main/main
+include ../../blocks/info/info
 block variables
  - let pageClass = 'room-details-page';
  - let containerName = 'room-details-container'
 block content
+   div.room-image-wrapper
+    img(src='assets/img/image 1.jpg')
+    div.second-column
+     img.second(src='assets/img/image 2.jpg')
+     img(src='assets/img/image 3.jpg')
+   div.comment-section-wrapper
+    div.cons
+     h3 Сведения о номере
+     each item in [{righthead: 'mood', tophead:'Комфорт',bottomtext:'Шумопоглощающие стены'},{righthead: 'domain', tophead:'Удобство',bottomhead:'Окно в каждой спальне'},{righthead: 'whatshot', tophead:'Уют',bottomhead:'Номер оснащен камином'},]
+       +icon-info( item )
+
+     div.comments
+      h3 Отзывы посетителей номера
+      each item in [{image:'image.jpg',tophead:'Мурад Сарафанов',bottomtext:'5 дней назад'},{image:'image 4.jpg',tophead:'Патрисия Стеклышкова',bottomtext:'Неделю назад'},]
+       +comment-info( item )
+     include ../../blocks/like-button/like-button
+
+
+
+
+
+
+
+

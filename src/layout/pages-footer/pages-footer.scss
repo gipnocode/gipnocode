@@ -5,10 +5,8 @@
   background-color: var(--color8);
   box-shadow: 0 10 20 var(--color5);
   font-family: var(--first-font);
-  font-style: normal;
-  font-weight: normal;
   font-size: 14px;
-  line-height: 17px;
+  //line-height: 17px;
   color: rgba(31, 32, 65, 0.5);
 }
 //
@@ -45,8 +43,7 @@
 }
 .pages-footer-nav-link {
   font-family: var(--first-font);
-  font-style: normal;
-  font-weight: bold;
+  //font-weight: bold;
   font-size: 14px;
   line-height: 17px;
   color: rgba(31, 32, 65, 0.5);

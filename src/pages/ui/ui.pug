@@ -1,27 +1,49 @@
-extends ../../layout/plain-main
+extends ../../layout/main/plain-main
 include ../../blocks/button/button
 block variables
  - let pageClass = 'ui-page';
  - let containerName = 'ui-container'
 block content
  include ../../blocks/headers/ui-header/ui-header
-  div.button-stn-wrapp
-    +button({lineTitle: 'CLICK ME', mods: 'style1'})
-    +button({lineTitle: 'CLICK ME', mods: 'style1, opasity'})
-
-    div.rounded-corners-gradient-borders
-     +button({lineTitle: 'CLICK ME', mods: 'border'})
-    div.rounded-corners-gradient-borders.button_opasity
-     +button({lineTitle: 'CLICK ME', mods: 'border'})
-
-
-     //+button({lineTitle: 'CLICK ME', mods: 'border'})
-    //+button({lineTitle: 'CLICK ME', mods: 'style2'})
-  //div.button-long-wrapp
-   +button({lineTitle: 'CLICK ME', mods: 'border'})
-  // +button({lineTitle: 'CLICK ME', mods: 'long'})
-
-   +menu('/mock-adress/change-me', '')
+ .radio-container
+  ul
+   li
+    input#c1(type='checkbox')
+    label(for='c1') Checkbox
+   li
+    input#c2(type='checkbox' checked='')
+    label(for='c2') Checkbox
+   li
+    input#r1(type='radio' name='radio' value='1')
+    label(for='r1') Мужчина
+   li
+    input#r2(type='radio' name='radio' value='2' checked='')
+    label(for='r2') Женщина
+   li
+    input#s1.switch(type='checkbox')
+    label(for='s1') Switch
+   li
+    input#s2.switch(type='checkbox' checked='')
+    label(for='s2') Switch
+  ul
+   li
+    input#c1d(type='checkbox' disabled='')
+    label(for='c1d') Checkbox
+   li
+    input#c2d(type='checkbox' checked='' disabled='')
+    label(for='c2d') Checkbox
+   li
+    input#r1d(type='radio' name='radiod' value='1' disabled='')
+    label(for='r1d') Radio
+   li
+    input#r2d(type='radio' name='radiod' value='2' checked='' disabled='')
+    label(for='r2d') Radio
+   li
+    input#s1d.switch(type='checkbox' disabled='')
+    label(for='s1d') Switch
+   li
+    input#s2d.switch(type='checkbox' checked='' disabled='')
+    label(for='s2d') Switch
 
 
    

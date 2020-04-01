@@ -1,12 +1,3 @@
-import "@fortawesome/fontawesome-free/js/fontawesome";
-import "@fortawesome/fontawesome-free/js/solid";
-import "@fortawesome/fontawesome-free/js/regular";
-import "@fortawesome/fontawesome-free/js/brands";
-
-library.add(fas, far, fab);
-
-dom.i2svg();
-
 function importAll(resolve) {
   resolve.keys().forEach(resolve);
 }
@@ -15,3 +6,9 @@ importAll(require.context("./blocks/", true, /\.js$|\.scss$/));
 importAll(require.context("./pages/", true, /\.js$|\.scss$/));
 importAll(require.context("./layout/", true, /\.js$|\.scss$/));
 importAll(require.context("./theme/", true, /\.js$|\.scss$/));
+
+// jQuery(document).ready(function($) {
+//   $(".adult").text("etr54re5");
+// });
+
+// document.querySelectorAll(".pages-header-nav-link");

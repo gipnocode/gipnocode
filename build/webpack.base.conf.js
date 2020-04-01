@@ -118,13 +118,16 @@ module.exports = {
       { from: `${PATHS.src}/blocks/logo/logo.svg`, to: `assets/img` },
       { from: `${PATHS.src}/layout/cards/img`, to: `assets/img` },
       { from: `${PATHS.src}/blocks/info/img`, to: `assets/img` },
+      { from: `${PATHS.src}/blocks/dropdown/images`, to: `assets/img` },
 
       { from: `${PATHS.src}/fonts/`, to: `assets/fonts` },
 
       { from: `${PATHS.src}/static`, to: 'assets/static' },
     ]),
-
-
-
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
+    }),
   ],
 };

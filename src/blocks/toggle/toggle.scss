@@ -1,60 +1,92 @@
-//https://www.webslake.com/article/creating-a-toggle-button-using-html-and-css-without-any-javascript/
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .toggle {
+    //--active: #275efe;
+    --active-inner: #bc9cff;
+    --focus: 2px rgba(39, 94, 254, 0.3);
+    --border: #bbc1e1;
+    --border-hover: #bc9cff;
+    --background: #fff;
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    background-color: var(--color8);
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
 
-#cover {
-  width: 40px;
-  height: 20px;
-  //margin: 0 auto;
-  position: relative;
+    &:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+        opacity var(--d-o, 0.2s);
+    }
+
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+
+      & + .toggle_lable {
+        cursor: not-allowed;
+      }
+    }
+
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          border: 1px solid #bc9cff;
+        }
+      }
+    }
+
+    &:focus {
+      border: 1px solid #bc9cff;
+    }
+  }
+  .toggle {
+    &.switch {
+      width: 38px;
+      border-radius: 10px;
+      &:after {
+        left: 3px;
+        top: 3.9px;
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 19px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
 }
-
-#checkbox {
-  margin: 0px;
-  width: 100%;
-  height: 20px;
-  cursor: pointer;
-  opacity: 0;
-  position: relative;
-  z-index: 3;
-}
-
-#bar {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  z-index: 1;
-  border-radius: 10px;
-}
-
-#knob {
-  position: absolute;
-  top: 4px;
-  left: 6px;
-  width: 12px;
-  height: 12px;
-  background: rgba(31, 32, 65, 0.25);
-  border-radius: 50%;
-  transition: left 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28),
-    margin-left 0.3s ease, width 0.3s ease, border-radius 0.3s ease;
-  box-shadow: 0px 1px 1px #7d7d7d;
-  z-index: 2;
-}
-
-#checkbox:active ~ #knob {
-  width: 18px;
-}
-
-#checkbox:checked ~ #knob {
-  left: 25px;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-}
-
-#checkbox:checked ~ #bar {
-  border: 1px solid #bc9cff;
-}
-
-#checkbox:checked:active ~ #knob {
-  margin-left: -20px;
+.toggle-w {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

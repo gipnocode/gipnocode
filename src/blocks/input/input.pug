@@ -1,10 +1,8 @@
 mixin input-field(props = {})
  -
-  const {mods, placeholder, moduleID, readonly} = props
+  const {mods, placeholder, readonly, type, required} = props
   var attributes = {}
-  if (moduleID !== 'undefined' && moduleID) {
-   attributes.id = moduleID
-  }
+
   let allMods = ''
   if (typeof(mods) !== 'undefined' && mods) {
    let modList = mods.split(',')
@@ -16,8 +14,9 @@ mixin input-field(props = {})
  input.input-field(
   class = allMods,
   placeholder = placeholder || '',
-  type= 'text',
-  autocomplete= "off",
+  type= type,
+  required= true
+
  )&attributes(attributes)
 
 

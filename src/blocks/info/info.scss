@@ -1,5 +1,4 @@
 .info {
-  //background-color: #6fcf97;
   width: 270px;
   padding: 1em;
 }
@@ -38,8 +37,6 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-  /* or 129% */
-
   color: rgba(31, 32, 65, 0.5);
 }
 
@@ -57,18 +54,23 @@
 }
 .icon-info {
   width: 291px;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 14px;
+  height: 48px;
+  display: grid;
+  grid-template-columns: 48px 220.45px;
+  justify-content: space-between;
 }
 .icon-info-left {
-  padding: 0 1em 0 0;
+}
+.commet-info-img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 .icon-info_right {
   display: grid;
   justify-content: space-between;
-  height: 51px;
-  margin-bottom: 40px;
+  align-items: baseline;
+  font-size: 14px;
 }
 .icon-info-left > span {
   font-size: 48px;

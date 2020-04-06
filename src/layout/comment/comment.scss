@@ -1,0 +1,11 @@
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 703px;
+}
+.recomendation {
+  display: grid;
+  grid-template-columns: 7% 93%;
+  grid-column-gap: 0.6em;
+  padding: 0.6em 1em;
+}

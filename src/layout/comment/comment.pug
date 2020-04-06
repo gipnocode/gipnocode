@@ -1,0 +1,11 @@
+include ../../blocks/info/info
+include ../../blocks/like-button/like-button
+mixin comment({image, tophead, bottomtext, text, num})
+ article.comment
+  +comment-info({image:image, tophead:tophead, bottomtext:bottomtext})
+  .recomendation
+  +like-button({num:num})
+  section= text
+
+
+

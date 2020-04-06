@@ -1,0 +1,32 @@
+.calendar-button-wrapper {
+  margin-top: 400px;
+}
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  color: #333;
+  font-family: Tahoma, Verdana, sans-serif;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.demo {
+  margin: 30px 0;
+}
+.date-picker-wrapper .month-wrapper table .day.lalala {
+  background-color: orange;
+}
+.options {
+  display: none;
+  border-left: 6px solid #8ae;
+  padding: 10px;
+  font-size: 12px;
+  line-height: 1.4;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.date-picker-wrapper.date-range-picker19 .day.first-date-selected {
+  background-color: red !important;
+}
+.date-picker-wrapper.date-range-picker19 .day.last-date-selected {
+  background-color: orange !important;
+}

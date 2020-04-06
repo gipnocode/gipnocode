@@ -1,0 +1,103 @@
+extends ../../layout/main/plain-main
+include ../../blocks/toggle/toggle
+include ../../blocks/radio/radio
+include ../../blocks/checkbox/checkbox
+include ../../blocks/like-button/like-button
+include ../../blocks/input/input
+include ../../blocks/info/info
+include ../../layout/comment/comment
+block variables
+ - let pageClass = 'form-elements';
+
+block content
+ .form-elements-container
+  .form-elements-text-wrapper
+   .title
+    span.text-field-left-title text field
+    span.text-field-right-title default
+   +input-field({placeholder: 'Email'})
+   .title
+    span.text-field-left-title text field
+    span.text-field-right-title hover/focus
+   +input-field({placeholder: 'This is pretty awesome'})
+   .title
+    span.text-field-left-title dropdaun
+    span.text-field-right-title default
+   include ../../blocks/dropdown/dropdown
+   .title
+    span.text-field-left-title masked text field
+    span.text-field-right-title default
+   +input-field({placeholder:'дд.мм.гггг', mods:'date'})
+
+   .title
+    span.text-field-left-title subscription text-field
+   +input-field({placeholder: 'Email'})
+   .title
+    span.text-field-left-title dropdaun
+    span.text-field-right-title default
+   include ../../blocks/dropdown/dropdown
+   .title
+    span.text-field-left-title dropdaun
+    span.text-field-right-title expanded
+   include ../../blocks/dropdown/dropdown
+   include ../../blocks/checkbox-list/checkbox-list
+   include ../../blocks/checkbox-list/checkbox-list
+   div.cons
+    each item in [{righthead: 'mood', tophead:'Комфорт',bottomtext:'Шумопоглощающие стены'},{righthead: 'domain', tophead:'Удобство',bottomhead:'Окно в каждой спальне'},]
+     +icon-info( item )
+
+
+  .form-elements-toggle-wrapper
+   .checkbox-wrapper
+    h1 checkbox buttons
+    +checkbox('Можно курить')
+    +checkbox('Можно с питтомцами')
+    +checkbox('Можно пригласить гостей (до 10 человек)')
+   .radio-buttons-wrapper
+    h1 radio buttons
+    +radio-buttons({
+      labelTitle: 'RADIO BUTTONS',
+      radioButtonsSet: 'radio-buttons-test',
+      buttonsList: [
+        {
+          buttonTitle: 'Мужчина',
+          buttonValue: '1',
+          checked: true
+        },
+        {
+          buttonTitle: 'Женщина',
+          buttonValue: '2'
+        }
+      ]
+    })
+   .toggle-wrapper
+    h1 toggle
+    +toggle('Получать спецпредложения')
+    +toggle('Получать спецпредложения')
+   .like-wrapper
+    h1 like button
+    .lw
+     +like-button({
+       num: '2'
+     })
+     +like-button({
+       num: '12'
+     })
+   .rate-wrapper
+    h1 rate button
+    .rw
+     include ../../blocks/rate/rate
+     include ../../blocks/rate/rate
+
+  .third-container
+   +comment({
+     image: 'cadr.png',
+     tophead: 'Мурад Сарафанов',
+     bottomtext: '5 дней назад',
+     text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+     num: '12'
+   })
+
+
+
+

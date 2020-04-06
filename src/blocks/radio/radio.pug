@@ -1,0 +1,30 @@
+mixin radio-buttons(props={})
+ -
+  const {mods, moduleClass, buttonsList, radioButtonsSet} = props
+  let allMods = ''
+  if (typeof(mods) !== 'undefined' && mods) {
+   let modList = mods.split(',')
+   for (let i=0; i < modList.length; i++) {
+    allMods = allMods + ' radio-buttons_' + modList[i].trim()
+   }
+  }
+
+ .radio-buttons(class = moduleClass + allMods)
+  each buttonString, index in buttonsList
+   - const {buttonTitle, checked, buttonValue} = buttonString
+   label.radio-buttons__label
+    input.radio-buttons__input(
+     type  = 'radio',
+     name  = radioButtonsSet,
+     value = buttonValue,
+     checked = checked ? checked : false
+    )
+    span.radio-buttons__marker
+    |
+    = buttonTitle
+
+    //TODO: добавить тег с текстом, для изменения цвета шрифта
+
+
+
+

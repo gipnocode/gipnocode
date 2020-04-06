@@ -105,7 +105,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `[name].[hash].css`,
     }),
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
       ...PAGES.map((page) => new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,

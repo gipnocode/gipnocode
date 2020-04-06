@@ -1,3 +1,6 @@
+import "./blocks/jquery-date-range-picker-master/src/daterangepicker.scss";
+import "./blocks/jquery-date-range-picker-master/src/jquery.daterangepicker";
+
 function importAll(resolve) {
   resolve.keys().forEach(resolve);
 }

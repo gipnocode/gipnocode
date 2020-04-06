@@ -1,17 +1,19 @@
 include ../../blocks/info/info
-mixin card({image, righthead, righttext, tophead, toptext,bottomhead, bottomtext})
+
+mixin card({linkToRoom, starName, image1, image2, image3, image4, righthead, righttext, tophead, toptext,bottomhead, bottomtext, id})
  div.card
   div.card-img-wrapper
-   img(src=(`assets/img/${image}`), alt="apartment photo")
-   i.material-icons.material-icons-left chevron_left
-   i.material-icons.material-icons-right chevron_right
-   div.circle-wrapper
-    div.round
-    div.round
-    div.round
-    div.round
-  +info({righthead:righthead, righttext:righttext, tophead:tophead,
-    toptext: toptext, bottomhead:bottomhead, bottomtext: bottomtext})
+   div.slick
+    img(src=(`assets/img/${image1}`), alt="apartment photo")
+    img(src=(`assets/img/${image2}`), alt="apartment photo")
+    img(src=(`assets/img/${image3}`), alt="apartment photo")
+    img(src=(`assets/img/${image4}`), alt="apartment photo")
+   //i.material-icons.material-icons-left chevron_left
+   //i.material-icons.material-icons-right chevron_right
 
+  +info({righthead:righthead, righttext:righttext, tophead:tophead,
+    toptext: toptext, bottomhead:bottomhead, bottomtext: bottomtext,
+    linkToRoom:linkToRoom, starName:starName})
+  //include ../../blocks/rate/rate
 
 

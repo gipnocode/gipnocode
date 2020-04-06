@@ -1,14 +1,12 @@
 mixin info(info)
  .info
-  div.info-left
+  div.info-top
    span.info_left-num= info.righthead
-   span.info_left-text= info.righttext
-  div.info_top
    span.info_number= info.tophead
-   span.info_text= info.toptext
   div.info_bottom
-   span.info_number= info.bottomhead
-   span.info_bottom-text= info.bottomtext
+   div.rating(class= info.starName)
+   a.info-number.to-room-rating(href= info.linkToRoom) #{info.bottomhead}
+   //span.info_bottom-text= info.bottomtext
 
 mixin icon-info(info)
  .icon-info

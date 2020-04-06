@@ -1,0 +1,40 @@
+include ../../blocks/input/input
+include ../../blocks/radio/radio
+include ../../blocks/toggle/toggle
+include ../../blocks/button/button
+
+.form-wrapper
+ form.form(method='post' name='singhup' id='singhup')
+  h2  Регистрация аккаунта
+  +input-field({placeholder: 'Имя', type: 'text'})
+  +input-field({placeholder: 'Фамилия', type: 'text'})
+  div.radio-wrapper
+   +radio-buttons({
+     labelTitle: 'RADIO BUTTONS',
+     radioButtonsSet: 'radio-buttons-test',
+     buttonsList: [
+       {
+         buttonTitle: 'Мужчина',
+         buttonValue: '1',
+         checked: true
+       },
+       {
+         buttonTitle: 'Женщина',
+         buttonValue: '2'
+       }
+     ]
+   })
+  h3 Дата рождения
+  +input-field({placeholder: 'dd.mm.gggg', id: 'username'})
+  h3 Данные для входа в сервис
+  +input-field({placeholder: 'Email', type: 'email'})
+  +input-field({placeholder: 'Пароль', type: 'password'})
+  +toggle("Получать спецпредложения")
+  +button({lineTitle: 'Зарегистрироваться', mods: 'style1'})
+  .form-button-wrapper
+    p Уже есть аккаунт на Toxin?
+    //+button({lineTitle: 'Войти', mods: 'style2', type: 'button'})
+    +btn('Войти',  'style2',  true, true)
+
+
+

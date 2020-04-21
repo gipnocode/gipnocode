@@ -72,31 +72,21 @@
     url("/assets/fonts/fa-brands-400.ttf") format("truetype"),
     url("/assets/fonts/fa-brands-400.svg") format("svg");
 }
-.form-title {
+legend {
   font-family: OpenSans-Bold;
   font-size: 24px;
   line-height: 30px;
-}
-
-.form-label,
-.form-title {
-  font-style: normal;
-  font-weight: 700;
   color: #1f2041;
 }
 
 .form-label {
+  display: block;
   font-family: Montserrat-Bold;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
-  -webkit-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
   margin-bottom: 5px;
+  color: #1f2041;
 }
 
 input[placeholder] {

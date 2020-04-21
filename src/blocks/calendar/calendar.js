@@ -12,7 +12,7 @@ $(function () {
     showTopbar: false,
   });
 
-  $(".mytest2").dateRangePicker({
+  $(".dinamic-calendar").dateRangePicker({
     separator: " to ",
 
     getValue: function () {

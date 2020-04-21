@@ -1,33 +1,33 @@
 include ../../blocks/input/input
 include ../../blocks/button/button
 
-form.search-form(action="#", method="post")
-  legend.form-title Найдём номера под ваши пожеления
-  div.mytest2
-    div.input-wrapper1
+form(action="#", method="post")
+  legend Найдём номера под ваши пожелания
+  div.dinamic-calendar-wrapper
+    div.search-form-input-wrapper
       label(class="form-label" for="#calendar1") Прибытие
       +input-field({
         type: 'date',
         placeholder: 'дд.мм.гггг',
-        mode: 'input-field_calendar-one',
+        mods: 'input-field_calendar-one',
         type: "text",
         required: true,
         id: "calendar1"
       })
-    div.input-wrapper2
+    div.search-form-input-wrapper
       label(class="form-label" for="#calendar2") Выезд
       +input-field({
         type: 'date',
         placeholder: 'дд.мм.гггг',
-        mode: 'input-field_calendar-two',
+        mods: 'input-field_calendar-two',
         type: "text",
         required: true,
         id: "calendar2"
       })
-  div.drop-wrapper
+  div.search-form-dropdown-wrapper
     label(class="form-label" for="#drop") Гости
     include ../dropdown/dropdown
-    div.button-w
+    div.search-form-button-wrapper
       +button({
         lineTitle: 'Подобрать номер',
         mods: 'style1, size2, border-big'

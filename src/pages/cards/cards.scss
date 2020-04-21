@@ -1,14 +1,9 @@
-.cards {
-  display: flex;
-  flex-direction: row;
-  //justify-content: flex-end;
-  width: 100%;
+.cards-page-search-form-w {
+  display: block;
+  margin-top: 20px;
+  margin-left: 30px;
 }
-
-.w1 {
-}
-.w2 {
-  background-color: yellow;
+.cards-page-static-calendar-w {
   position: absolute;
   top: 20px;
   right: 300px;

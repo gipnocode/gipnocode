@@ -4,11 +4,11 @@
     Licensed under the MIT license (http://digitalbush.com/projects/masked-input-plugin/#license)
     Version: 1.4.1
 */
-!(function(factory) {
+!(function (factory) {
   "function" == typeof define && define.amd
     ? define(["jquery"], factory)
     : factory("object" == typeof exports ? require("jquery") : jQuery);
-})(function($) {
+})(function ($) {
   var caretTimeoutId,
     ua = navigator.userAgent,
     iPhone = /iphone/i.test(ua),
@@ -18,19 +18,19 @@
     definitions: {
       "9": "[0-9]",
       a: "[A-Za-z]",
-      "*": "[A-Za-z0-9]"
+      "*": "[A-Za-z0-9]",
     },
     autoclear: !0,
     dataName: "rawMaskFn",
-    placeholder: "_"
+    placeholder: "_",
   }),
     $.fn.extend({
-      caret: function(begin, end) {
+      caret: function (begin, end) {
         var range;
         if (0 !== this.length && !this.is(":hidden"))
           return "number" == typeof begin
             ? ((end = "number" == typeof end ? end : begin),
-              this.each(function() {
+              this.each(function () {
                 this.setSelectionRange
                   ? this.setSelectionRange(begin, end)
                   : this.createTextRange &&
@@ -50,13 +50,13 @@
                   (end = begin + range.text.length)),
               {
                 begin: begin,
-                end: end
+                end: end,
               });
       },
-      unmask: function() {
+      unmask: function () {
         return this.trigger("unmask");
       },
-      mask: function(mask, settings) {
+      mask: function (mask, settings) {
         var input,
           defs,
           tests,
@@ -75,7 +75,7 @@
             {
               autoclear: $.mask.autoclear,
               placeholder: $.mask.placeholder,
-              completed: null
+              completed: null,
             },
             settings
           )),
@@ -83,7 +83,7 @@
           (tests = []),
           (partialPosition = len = mask.length),
           (firstNonMaskPos = null),
-          $.each(mask.split(""), function(i, c) {
+          $.each(mask.split(""), function (i, c) {
             "?" == c
               ? (len--, (partialPosition = i))
               : defs[c]
@@ -94,7 +94,7 @@
                   (lastRequiredNonMaskPos = tests.length - 1))
               : tests.push(null);
           }),
-          this.trigger("unmask").each(function() {
+          this.trigger("unmask").each(function () {
             function tryFireCompleted() {
               if (settings.completed) {
                 for (var i = firstNonMaskPos; lastRequiredNonMaskPos >= i; i++)
@@ -216,7 +216,7 @@
                       (next = seekNext(p)),
                       android)
                     ) {
-                      var proxy = function() {
+                      var proxy = function () {
                         $.proxy($.fn.caret, input, next)();
                       };
                       setTimeout(proxy, 0);
@@ -268,27 +268,27 @@
               );
             }
             var input = $(this),
-              buffer = $.map(mask.split(""), function(c, i) {
+              buffer = $.map(mask.split(""), function (c, i) {
                 return "?" != c ? (defs[c] ? getPlaceholder(i) : c) : void 0;
               }),
               defaultBuffer = buffer.join(""),
               focusText = input.val();
-            input.data($.mask.dataName, function() {
-              return $.map(buffer, function(c, i) {
+            input.data($.mask.dataName, function () {
+              return $.map(buffer, function (c, i) {
                 return tests[i] && c != getPlaceholder(i) ? c : null;
               }).join("");
             }),
               input
-                .one("unmask", function() {
+                .one("unmask", function () {
                   input.off(".mask").removeData($.mask.dataName);
                 })
-                .on("focus.mask", function() {
+                .on("focus.mask", function () {
                   if (!input.prop("readonly")) {
                     clearTimeout(caretTimeoutId);
                     var pos;
                     (focusText = input.val()),
                       (pos = checkVal()),
-                      (caretTimeoutId = setTimeout(function() {
+                      (caretTimeoutId = setTimeout(function () {
                         input.get(0) === document.activeElement &&
                           (writeBuffer(),
                           pos == mask.replace("?", "").length
@@ -300,9 +300,9 @@
                 .on("blur.mask", blurEvent)
                 .on("keydown.mask", keydownEvent)
                 .on("keypress.mask", keypressEvent)
-                .on("input.mask paste.mask", function() {
+                .on("input.mask paste.mask", function () {
                   input.prop("readonly") ||
-                    setTimeout(function() {
+                    setTimeout(function () {
                       var pos = checkVal(!0);
                       input.caret(pos), tryFireCompleted();
                     }, 0);
@@ -313,6 +313,6 @@
               checkVal();
           })
         );
-      }
+      },
     });
 });

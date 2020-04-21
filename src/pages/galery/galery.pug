@@ -4,19 +4,19 @@ include ../../layout/cards/cards
 block variables
  - let pageClass = 'galery-page';
  - let containerName = 'galery-container'
-
 block content
- div.cont
+ main.cont
   //h2 Номера, которые мы для вас подобрали
-  div.filter
-  div.card-galery
+  section.filter
+  section.card-galery
    +card({
      image1: 'room-350-1.jpg',
      image2: 'room-350-2.jpg',
      image3: 'room-350-3.jpg',
      image4: 'room-350-4.jpg',
      righthead:'№ 888 люкс',
-     tophead:'9 990₽ в сутки',
+     price: '9 990₽',
+     tophead: ' в сутки',
      bottomhead:'145 Отзывов',
      starName: 'cards-star1',
      linkToRoom: 'room-details.html'
@@ -151,4 +151,5 @@ block content
      starName: 'cards-star13',
      linkToRoom: 'room-details.html'
    })
+
 

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Montserrat-Regular";
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   src: url("/assets/fonts/Montserrat-Regular.eot");
   src: url("/assets/fonts/Montserrat-Regular.eot?#iefix")
@@ -12,7 +12,8 @@
 
 @font-face {
   font-family: "Montserrat-Bold";
-  font-weight: bold;
+  font-weight: 700;
+  font-style: normal;
   src: url("/assets/fonts/Montserrat-Bold.eot");
   src: url("/assets/fonts/Montserrat-Bold.eot?#iefix")
       format("embedded-opentype"),
@@ -22,12 +23,36 @@
 }
 @font-face {
   font-family: "Quicksand-Bold";
+  font-weight: 700;
+  font-style: normal;
   src: url("/assets/fonts/Quicksand-Bold.eot");
   src: url("/assets/fonts/Quicksand-Bold.eot?#iefix")
       format("/embedded-opentype"),
     url("/assets/fonts/Quicksand-Bold.woff") format("woff"),
     url("/assets/fonts/Quicksand-Bold.ttf") format("truetype"),
     url("/assets/fonts/Quicksand-Bold.svg") format("svg");
+}
+@font-face {
+  font-family: "OpenSans-Regular";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/assets/fonts/OpenSans-Regular.eot");
+  src: url("/assets/fonts/OpenSans-Regular.eot?#iefix")
+      format("/embedded-opentype"),
+    url("/assets/fonts/OpenSans-Regular.woff") format("woff"),
+    url("/assets/fonts/OpenSans-Regular.ttf") format("truetype"),
+    url("/assets/fonts/OpenSans-Regular.svg") format("svg");
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/assets/fonts/OpenSans-Bold.eot");
+  src: url("/assets/fonts/OpenSans-Bold.eot?#iefix")
+      format("/embedded-opentype"),
+    url("/assets/fonts/OpenSans-Bold.woff") format("woff"),
+    url("/assets/fonts/OpenSans-Bold.ttf") format("truetype"),
+    url("/assets/fonts/OpenSans-Bold.svg") format("svg");
 }
 @font-face {
   font-family: "Material Icons";
@@ -47,50 +72,76 @@
     url("/assets/fonts/fa-brands-400.ttf") format("truetype"),
     url("/assets/fonts/fa-brands-400.svg") format("svg");
 }
-h1 {
-  font-family: Montserrat-Bold;
+.form-title {
+  font-family: OpenSans-Bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.form-label,
+.form-title {
   font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-weight: 700;
   color: #1f2041;
 }
-label {
+
+.form-label {
+  font-family: Montserrat-Bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  -webkit-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  margin-bottom: 5px;
+}
+
+input[placeholder] {
   font-family: Montserrat-Regular;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
-  /* identical to box height, or 171% */
-
-  /* Dark 75% */
-
+  line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
+  text-transform: uppercase;
+  padding: 0.9em;
 }
+
+fieldset {
+  border: rgba(0, 0, 0, 0);
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .text-field-right-title {
   font-family: Montserrat-Regular;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 15px;
+  font-weight: 400;
   text-align: right;
-  text-transform: uppercase;
   color: rgba(31, 32, 65, 0.5);
 }
-.text-field-left-title {
-  font-family: Montserrat-Bold;
+
+.text-field-left-title,
+.text-field-right-title {
   font-style: normal;
-  font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
+}
+
+.text-field-left-title {
+  font-family: Montserrat-Bold;
+  font-weight: 700;
   color: #1f2041;
 }
 
 section {
   font-family: Montserrat-Regular;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);

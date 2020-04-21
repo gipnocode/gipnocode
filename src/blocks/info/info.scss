@@ -48,14 +48,18 @@
 }
 
 .info_number {
-  font-family: var(--second-font);
-  font-style: normal;
-  font-weight: bold;
+  font-family: Montserrat-Regular;
+
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+.bold {
+  font-family: Montserrat-Bold;
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
 }
-
 .info_text {
   font-family: var(--first-font);
   font-style: normal;

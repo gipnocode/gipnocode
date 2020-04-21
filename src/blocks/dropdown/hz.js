@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
   $(".no-config").iqDropdown();
 
   $(".custom").iqDropdown({
@@ -6,7 +6,7 @@ $(document).ready(function() {
     maxItems: 100,
     selectionText: "гостей",
     textPlural: "гость",
-    onChange: function(id, count, totalItems) {
+    onChange: function (id, count, totalItems) {
       // if (id === "adult" && count === 1) {
       //   $(".adult").text("взрослый");
       // } else {
@@ -24,7 +24,7 @@ $(document).ready(function() {
       // }
 
       console.log(id, count, totalItems);
-    }
+    },
   });
 
   // $(".custom-message").iqDropdown({

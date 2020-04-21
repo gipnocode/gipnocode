@@ -1,4 +1,4 @@
-$(".like__btn").on("click", function() {
+$(".like__btn").on("click", function () {
   // Check if it's already been clicked
   if (!$(this).hasClass("like__btn--disabled")) {
     // Update the number
@@ -6,10 +6,8 @@ $(".like__btn").on("click", function() {
     $(".like__btn span").html(updated_likes);
   }
   // Make btn disabled
-  $(this)
-    .attr("disabled", true)
-    .addClass("tada");
+  $(this).attr("disabled", true).addClass("tada");
 });
-$(".like-button").on("click", function() {
+$(".like-button").on("click", function () {
   $(this).toggleClass("violet");
 });

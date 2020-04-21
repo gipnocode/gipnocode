@@ -3,7 +3,7 @@
 // license : MIT
 // www.jszen.com
 
-(function(factory) {
+(function (factory) {
   if (typeof define === "function" && define.amd) {
     // AMD. Register as an anonymous module.
     define(["jquery", "moment"], factory);
@@ -14,7 +14,7 @@
     // Browser globals
     factory(jQuery, moment);
   }
-})(function($, moment) {
+})(function ($, moment) {
   "use strict";
   $.dateRangePickerLanguages = {
     //default language: English
@@ -43,7 +43,7 @@
         "september",
         "october",
         "november",
-        "december"
+        "december",
       ],
       shortcuts: "Shortcuts",
       "custom-values": "Custom Values",
@@ -66,7 +66,7 @@
       "default-default": "Please select a date range",
       time: "Time",
       hour: "Hour",
-      minute: "Minute"
+      minute: "Minute",
     },
     id: {
       selected: "Terpilih:",
@@ -93,7 +93,7 @@
         "september",
         "oktober",
         "november",
-        "desember"
+        "desember",
       ],
       shortcuts: "Pintas",
       "custom-values": "Nilai yang ditentukan",
@@ -117,7 +117,7 @@
       "default-default": "Silakan pilih rentang tanggal",
       time: "Waktu",
       hour: "Jam",
-      minute: "Menit"
+      minute: "Menit",
     },
     az: {
       selected: "Seçildi:",
@@ -143,7 +143,7 @@
         "sentyabr",
         "oktyabr",
         "noyabr",
-        "dekabr"
+        "dekabr",
       ],
       shortcuts: "Qısayollar",
       past: "Keçmiş",
@@ -162,7 +162,7 @@
       "default-single": "Tarix seçin",
       "default-less": "%d gündən az bir tarix seçin",
       "default-range": "%d və %d gün aralığında tarixlər seçin",
-      "default-default": "Tarix aralığı seçin"
+      "default-default": "Tarix aralığı seçin",
     },
     bg: {
       selected: "Избрано:",
@@ -189,7 +189,7 @@
         "септември",
         "октомври",
         "ноември",
-        "декември"
+        "декември",
       ],
       shortcuts: "Преки пътища",
       "custom-values": "Персонализирани стойности",
@@ -212,7 +212,7 @@
       "default-default": "Моля изберете период",
       time: "Време",
       hour: "Час",
-      minute: "Минута"
+      minute: "Минута",
     },
     //simplified chinese
     cn: {
@@ -240,7 +240,7 @@
         "九月",
         "十月",
         "十一月",
-        "十二月"
+        "十二月",
       ],
       shortcuts: "快捷选择",
       past: "过去",
@@ -262,7 +262,7 @@
       "default-default": "请选择一个日期范围",
       time: "时间",
       hour: "小时",
-      minute: "分钟"
+      minute: "分钟",
     },
     cz: {
       selected: "Vybráno:",
@@ -288,7 +288,7 @@
         "září",
         "říjen",
         "listopad",
-        "prosinec"
+        "prosinec",
       ],
       shortcuts: "Zkratky",
       past: "po",
@@ -307,7 +307,7 @@
       "default-single": "Prosím zvolte datum",
       "default-less": "Prosím zvolte rozsah data menší než %d dnů",
       "default-range": "Prosím zvolte rozsah data mezi %d a %d dny",
-      "default-default": "Prosím zvolte rozsah data"
+      "default-default": "Prosím zvolte rozsah data",
     },
     de: {
       selected: "Auswahl:",
@@ -333,7 +333,7 @@
         "september",
         "oktober",
         "november",
-        "dezember"
+        "dezember",
       ],
       shortcuts: "Schnellwahl",
       past: "Vorherige",
@@ -356,7 +356,7 @@
       "default-default": "Bitte ein Start- und Enddatum auswählen",
       Time: "Zeit",
       hour: "Stunde",
-      minute: "Minute"
+      minute: "Minute",
     },
     es: {
       selected: "Seleccionado:",
@@ -382,7 +382,7 @@
         "septiembre",
         "octubre",
         "noviembre",
-        "diciembre"
+        "diciembre",
       ],
       shortcuts: "Accesos directos",
       past: "Pasado",
@@ -401,7 +401,7 @@
       "default-single": "Por favor selecciona un día",
       "default-less": "Por favor selecciona un rango menor a %d días",
       "default-range": "Por favor selecciona un rango entre %d y %d días",
-      "default-default": "Por favor selecciona un rango de fechas."
+      "default-default": "Por favor selecciona un rango de fechas.",
     },
     fr: {
       selected: "Sélection:",
@@ -427,7 +427,7 @@
         "septembre",
         "octobre",
         "novembre",
-        "décembre"
+        "décembre",
       ],
       shortcuts: "Raccourcis",
       past: "Passé",
@@ -447,7 +447,7 @@
       "default-less": "Merci de choisir une intervalle inférieure %d jours",
       "default-range":
         "Merci de choisir une intervalle comprise entre %d et %d jours",
-      "default-default": "Merci de choisir une date"
+      "default-default": "Merci de choisir une date",
     },
     hu: {
       selected: "Kiválasztva:",
@@ -473,7 +473,7 @@
         "szeptember",
         "október",
         "november",
-        "december"
+        "december",
       ],
       shortcuts: "Gyorsválasztó",
       past: "Múlt",
@@ -492,7 +492,7 @@
       "default-single": "Válassz egy napot",
       "default-less": "Válassz ki egy időszakot ami rövidebb mint %d nap",
       "default-range": "Válassz ki egy %d - %d nap hosszú időszakot",
-      "default-default": "Válassz ki egy időszakot"
+      "default-default": "Válassz ki egy időszakot",
     },
     it: {
       selected: "Selezionati:",
@@ -518,7 +518,7 @@
         "settembre",
         "ottobre",
         "novembre",
-        "dicembre"
+        "dicembre",
       ],
       shortcuts: "Scorciatoie",
       past: "Scorso",
@@ -538,7 +538,7 @@
       "default-less": "Seleziona un intervallo minore di %d giorni",
       "default-range":
         "Seleziona un intervallo compreso tra i %d e i %d giorni",
-      "default-default": "Seleziona un intervallo di date"
+      "default-default": "Seleziona un intervallo di date",
     },
     ko: {
       selected: "기간:",
@@ -565,7 +565,7 @@
         "9월",
         "10월",
         "11월",
-        "12월"
+        "12월",
       ],
       shortcuts: "단축키들",
       past: "지난(오늘기준)",
@@ -587,7 +587,7 @@
       "default-default": "날짜 범위를 선택해 주세요",
       time: "시각",
       hour: "시",
-      minute: "분"
+      minute: "분",
     },
     no: {
       selected: "Valgt:",
@@ -613,7 +613,7 @@
         "september",
         "oktober",
         "november",
-        "desember"
+        "desember",
       ],
       shortcuts: "Snarveier",
       "custom-values": "Egendefinerte Verdier",
@@ -636,7 +636,7 @@
       "default-default": "Vennligst velg ein datoperiode",
       time: "Tid",
       hour: "Time",
-      minute: "Minutter"
+      minute: "Minutter",
     },
     nl: {
       selected: "Geselecteerd:",
@@ -662,7 +662,7 @@
         "september",
         "oktober",
         "november",
-        "december"
+        "december",
       ],
       shortcuts: "Snelkoppelingen",
       "custom-values": "Aangepaste waarden",
@@ -685,7 +685,7 @@
       "default-default": "Selecteer een interval",
       time: "Tijd",
       hour: "Uur",
-      minute: "Minuut"
+      minute: "Minuut",
     },
     ru: {
       selected: "Выбрано:",
@@ -711,7 +711,7 @@
         "Сентябрь",
         "Октябрь",
         "Ноябрь",
-        "Декабрь"
+        "Декабрь",
       ],
       shortcuts: "Быстрый выбор",
       "custom-values": "Пользовательские значения",
@@ -734,7 +734,7 @@
       "default-default": "Пожалуйста выберите диапазон",
       time: "Время",
       hour: "Часы",
-      minute: "Минуты"
+      minute: "Минуты",
     },
     uk: {
       selected: "Вибрано:",
@@ -760,7 +760,7 @@
         "вересень",
         "жовтень",
         "листопад",
-        "грудень"
+        "грудень",
       ],
       shortcuts: "Швидкий вибір",
       "custom-values": "Значення користувача",
@@ -783,7 +783,7 @@
       "default-default": "Будь ласка виберіть діапазон",
       time: "Час",
       hour: "Години",
-      minute: "Хвилини"
+      minute: "Хвилини",
     },
     pl: {
       selected: "Wybrany:",
@@ -809,7 +809,7 @@
         "wrzesień",
         "październik",
         "listopad",
-        "grudzień"
+        "grudzień",
       ],
       shortcuts: "Skróty",
       "custom-values": "Niestandardowe wartości",
@@ -832,7 +832,7 @@
       "default-default": "Wybierz okres",
       time: "Czas",
       hour: "Godzina",
-      minute: "Minuta"
+      minute: "Minuta",
     },
     se: {
       selected: "Vald:",
@@ -858,7 +858,7 @@
         "september",
         "oktober",
         "november",
-        "december"
+        "december",
       ],
       shortcuts: "genvägar",
       "custom-values": "Anpassade värden",
@@ -881,7 +881,7 @@
       "default-default": "Välj ett datumintervall",
       time: "tid",
       hour: "timme",
-      minute: "minut"
+      minute: "minut",
     },
     //Portuguese (European)
     pt: {
@@ -909,7 +909,7 @@
         "setembro",
         "outubro",
         "novembro",
-        "dezembro"
+        "dezembro",
       ],
       shortcuts: "Atalhos",
       "custom-values": "Valores Personalizados",
@@ -932,7 +932,7 @@
       "default-default": "Selecione um período",
       time: "Tempo",
       hour: "Hora",
-      minute: "Minuto"
+      minute: "Minuto",
     },
     // traditional chinese
     tc: {
@@ -960,7 +960,7 @@
         "九月",
         "十月",
         "十一月",
-        "十二月"
+        "十二月",
       ],
       shortcuts: "快速選擇",
       past: "過去",
@@ -982,7 +982,7 @@
       "default-default": "請選擇一個日期範圍",
       time: "日期",
       hour: "小時",
-      minute: "分鐘"
+      minute: "分鐘",
     },
     ja: {
       selected: "選択しました:",
@@ -1008,7 +1008,7 @@
         "9月",
         "10月",
         "11月",
-        "12月"
+        "12月",
       ],
       shortcuts: "クイック選択",
       past: "過去",
@@ -1030,7 +1030,7 @@
       "default-default": "日付範囲を選択してください",
       time: "時間",
       hour: "時間",
-      minute: "分"
+      minute: "分",
     },
     da: {
       selected: "Valgt:",
@@ -1056,7 +1056,7 @@
         "september",
         "oktober",
         "november",
-        "december"
+        "december",
       ],
       shortcuts: "genveje",
       "custom-values": "Brugerdefinerede værdier",
@@ -1079,7 +1079,7 @@
       "default-default": "Vælg datointerval",
       time: "tid",
       hour: "time",
-      minute: "minut"
+      minute: "minut",
     },
     // Finnish
     fi: {
@@ -1107,7 +1107,7 @@
         "syyskuu",
         "lokakuu",
         "marraskuu",
-        "joulukuu"
+        "joulukuu",
       ],
       shortcuts: "Pikavalinnat",
       "custom-values": "Mukautetut Arvot",
@@ -1130,7 +1130,7 @@
       "default-default": "Valitse aikajakso",
       time: "Aika",
       hour: "Tunti",
-      minute: "Minuutti"
+      minute: "Minuutti",
     },
     // Catala
     cat: {
@@ -1158,7 +1158,7 @@
         "setembre",
         "octubre",
         "novembre",
-        "desembre"
+        "desembre",
       ],
       shortcuts: "Dreçeres",
       "custom-values": "Valors personalitzats",
@@ -1181,11 +1181,11 @@
       "default-default": "Perfavor selecciona un període",
       time: "Temps",
       hour: "Hora",
-      minute: "Minut"
-    }
+      minute: "Minut",
+    },
   };
 
-  $.fn.dateRangePicker = function(opt) {
+  $.fn.dateRangePicker = function (opt) {
     if (!opt) opt = {};
     opt = $.extend(
       true,
@@ -1195,10 +1195,10 @@
         separator: " to ",
         language: "auto",
         startOfWeek: "sunday", // or monday
-        getValue: function() {
+        getValue: function () {
           return $(this).val();
         },
-        setValue: function(s) {
+        setValue: function (s) {
           if (
             !$(this).attr("readonly") &&
             !$(this).is(":disabled") &&
@@ -1210,7 +1210,7 @@
         startDate: false,
         endDate: false,
         time: {
-          enabled: false
+          enabled: false,
         },
         minDays: 0,
         maxDays: 0,
@@ -1236,13 +1236,13 @@
         selectBackward: false,
         applyBtnClass: "",
         singleMonth: "auto",
-        hoveringTooltip: function(days, startTime, hoveringTime) {
+        hoveringTooltip: function (days, startTime, hoveringTime) {
           return days > 1 ? days + " " + translate("days") : "";
         },
         showTopbar: true,
         swapTime: false,
         showWeekNumbers: false,
-        getWeekNumber: function(
+        getWeekNumber: function (
           date //date will be the first day of a week
         ) {
           return moment(date).format("w");
@@ -1252,7 +1252,7 @@
         customArrowPrevSymbol: null,
         customArrowNextSymbol: null,
         monthSelect: false,
-        yearSelect: false
+        yearSelect: false,
       },
       opt
     );
@@ -1280,7 +1280,7 @@
       opt.endDate = moment(opt.endDate, opt.format).toDate();
 
     if (opt.yearSelect && typeof opt.yearSelect === "boolean") {
-      opt.yearSelect = function(current) {
+      opt.yearSelect = function (current) {
         return [current - 5, current + 5];
       };
     }
@@ -1294,18 +1294,18 @@
 
     $(this)
       .off(".datepicker")
-      .on("click.datepicker", function(evt) {
+      .on("click.datepicker", function (evt) {
         var isOpen = box.is(":visible");
         if (!isOpen) open(opt.duration);
       })
-      .on("change.datepicker", function(evt) {
+      .on("change.datepicker", function (evt) {
         checkAndSetDefaultValue();
       })
-      .on("keyup.datepicker", function() {
+      .on("keyup.datepicker", function () {
         try {
           clearTimeout(domChangeTimer);
         } catch (e) {}
-        domChangeTimer = setTimeout(function() {
+        domChangeTimer = setTimeout(function () {
           checkAndSetDefaultValue();
         }, 2000);
       });
@@ -1318,7 +1318,7 @@
 
     // expose some api
     $(this).data("dateRangePicker", {
-      setStart: function(d1) {
+      setStart: function (d1) {
         if (typeof d1 == "string") {
           d1 = moment(d1, opt.format).toDate();
         }
@@ -1328,7 +1328,7 @@
 
         return this;
       },
-      setEnd: function(d2, silent) {
+      setEnd: function (d2, silent) {
         var start = new Date();
         start.setTime(opt.start);
         if (typeof d2 == "string") {
@@ -1337,7 +1337,7 @@
         setDateRange(start, d2, silent);
         return this;
       },
-      setDateRange: function(d1, d2, silent) {
+      setDateRange: function (d1, d2, silent) {
         if (typeof d1 == "string" && typeof d2 == "string") {
           d1 = moment(d1, opt.format).toDate();
           d2 = moment(d2, opt.format).toDate();
@@ -1350,14 +1350,14 @@
       redraw: redrawDatePicker,
       getDatePicker: getDatePicker,
       resetMonthsView: resetMonthsView,
-      destroy: function() {
+      destroy: function () {
         $(self).off(".datepicker");
         $(self).data("dateRangePicker", "");
         $(self).data("date-picker-opened", null);
         box.remove();
         $(window).off("resize.datepicker", calcPosition);
         $(document).off("click.datepicker", outsideClickClose);
-      }
+      },
     });
 
     $(window).on("resize.datepicker", calcPosition);
@@ -1434,27 +1434,25 @@
         box.addClass("two-months");
       }
 
-      setTimeout(function() {
+      setTimeout(function () {
         updateCalendarWidth();
         initiated = true;
       }, 0);
 
-      box.click(function(evt) {
+      box.click(function (evt) {
         evt.stopPropagation();
       });
 
       //if user click other place of the webpage, close date range picker window
       $(document).on("click.datepicker", outsideClickClose);
 
-      box.find(".next").click(function() {
+      box.find(".next").click(function () {
         if (!opt.stickyMonths) gotoNextMonth(this);
         else gotoNextMonth_stickily(this);
       });
 
       function gotoNextMonth(self) {
-        var isMonth2 = $(self)
-          .parents("table")
-          .hasClass("month2");
+        var isMonth2 = $(self).parents("table").hasClass("month2");
         var month = isMonth2 ? opt.month2 : opt.month1;
         month = nextMonth(month);
         if (
@@ -1480,15 +1478,13 @@
         showSelectedDays();
       }
 
-      box.find(".prev").click(function() {
+      box.find(".prev").click(function () {
         if (!opt.stickyMonths) gotoPrevMonth(this);
         else gotoPrevMonth_stickily(this);
       });
 
       function gotoPrevMonth(self) {
-        var isMonth2 = $(self)
-          .parents("table")
-          .hasClass("month2");
+        var isMonth2 = $(self).parents("table").hasClass("month2");
         var month = isMonth2 ? opt.month2 : opt.month1;
         month = prevMonth(month);
         if (
@@ -1514,12 +1510,12 @@
       box
         .attr("unselectable", "on")
         .css("user-select", "none")
-        .on("selectstart", function(e) {
+        .on("selectstart", function (e) {
           e.preventDefault();
           return false;
         });
 
-      box.find(".apply-btn").click(function() {
+      box.find(".apply-btn").click(function () {
         closeDatePicker();
         var dateRange =
           getDateString(new Date(opt.start)) +
@@ -1528,11 +1524,11 @@
         $(self).trigger("datepicker-apply", {
           value: dateRange,
           date1: new Date(opt.start),
-          date2: new Date(opt.end)
+          date2: new Date(opt.end),
         });
       });
 
-      box.find("[custom]").click(function() {
+      box.find("[custom]").click(function () {
         var valueName = $(this).attr("custom");
         opt.start = false;
         opt.end = false;
@@ -1544,7 +1540,7 @@
         if (opt.autoClose) closeDatePicker();
       });
 
-      box.find("[shortcut]").click(function() {
+      box.find("[shortcut]").click(function () {
         var shortcut = $(this).attr("shortcut");
         var end = new Date(),
           start = false;
@@ -1616,7 +1612,7 @@
         }
       });
 
-      box.find(".time1 input[type=range]").on("change touchmove", function(e) {
+      box.find(".time1 input[type=range]").on("change touchmove", function (e) {
         var target = e.target,
           hour =
             target.name == "hour"
@@ -1633,7 +1629,7 @@
         setTime("time1", hour, min);
       });
 
-      box.find(".time2 input[type=range]").on("change touchmove", function(e) {
+      box.find(".time2 input[type=range]").on("change touchmove", function (e) {
         var target = e.target,
           hour =
             target.name == "hour"
@@ -1662,7 +1658,7 @@
           );
           box.css({
             top: offset.top - containerOffset.top + $(self).outerHeight() + 4,
-            left: offset.left - containerOffset.left - leftIndent
+            left: offset.left - containerOffset.left - leftIndent,
           });
         } else {
           if (offset.left < 460) {
@@ -1672,7 +1668,7 @@
                 offset.top +
                 $(self).outerHeight() +
                 parseInt($("body").css("border-top") || 0, 10),
-              left: offset.left
+              left: offset.left,
             });
           } else {
             box.css({
@@ -1680,7 +1676,7 @@
                 offset.top +
                 $(self).outerHeight() +
                 parseInt($("body").css("border-top") || 0, 10),
-              left: offset.left + $(self).width() - box.width() - 16
+              left: offset.left + $(self).width() - box.width() - 16,
             });
           }
         }
@@ -1696,20 +1692,20 @@
       redrawDatePicker();
       checkAndSetDefaultValue();
       if (opt.customOpenAnimation) {
-        opt.customOpenAnimation.call(box.get(0), function() {
+        opt.customOpenAnimation.call(box.get(0), function () {
           $(self).trigger("datepicker-opened", {
-            relatedTarget: box
+            relatedTarget: box,
           });
         });
       } else {
-        box.slideDown(animationTime, function() {
+        box.slideDown(animationTime, function () {
           $(self).trigger("datepicker-opened", {
-            relatedTarget: box
+            relatedTarget: box,
           });
         });
       }
       $(self).trigger("datepicker-open", {
-        relatedTarget: box
+        relatedTarget: box,
       });
       showGap();
       updateCalendarWidth();
@@ -1841,18 +1837,12 @@
       var r = time;
       if (opt.batchMode === "week-range") {
         if (opt.startOfWeek === "monday") {
-          r = moment(parseInt(time))
-            .startOf("isoweek")
-            .valueOf();
+          r = moment(parseInt(time)).startOf("isoweek").valueOf();
         } else {
-          r = moment(parseInt(time))
-            .startOf("week")
-            .valueOf();
+          r = moment(parseInt(time)).startOf("week").valueOf();
         }
       } else if (opt.batchMode === "month-range") {
-        r = moment(parseInt(time))
-          .startOf("month")
-          .valueOf();
+        r = moment(parseInt(time)).startOf("month").valueOf();
       }
       return r;
     }
@@ -1861,18 +1851,12 @@
       var r = time;
       if (opt.batchMode === "week-range") {
         if (opt.startOfWeek === "monday") {
-          r = moment(parseInt(time))
-            .endOf("isoweek")
-            .valueOf();
+          r = moment(parseInt(time)).endOf("isoweek").valueOf();
         } else {
-          r = moment(parseInt(time))
-            .endOf("week")
-            .valueOf();
+          r = moment(parseInt(time)).endOf("week").valueOf();
         }
       } else if (opt.batchMode === "month-range") {
-        r = moment(parseInt(time))
-          .endOf("month")
-          .valueOf();
+        r = moment(parseInt(time)).endOf("month").valueOf();
       }
       return r;
     }
@@ -1886,41 +1870,21 @@
         opt.end = false;
       } else if (opt.batchMode === "week") {
         if (opt.startOfWeek === "monday") {
-          opt.start = moment(parseInt(time))
-            .startOf("isoweek")
-            .valueOf();
-          opt.end = moment(parseInt(time))
-            .endOf("isoweek")
-            .valueOf();
+          opt.start = moment(parseInt(time)).startOf("isoweek").valueOf();
+          opt.end = moment(parseInt(time)).endOf("isoweek").valueOf();
         } else {
-          opt.end = moment(parseInt(time))
-            .endOf("week")
-            .valueOf();
-          opt.start = moment(parseInt(time))
-            .startOf("week")
-            .valueOf();
+          opt.end = moment(parseInt(time)).endOf("week").valueOf();
+          opt.start = moment(parseInt(time)).startOf("week").valueOf();
         }
       } else if (opt.batchMode === "workweek") {
-        opt.start = moment(parseInt(time))
-          .day(1)
-          .valueOf();
-        opt.end = moment(parseInt(time))
-          .day(5)
-          .valueOf();
+        opt.start = moment(parseInt(time)).day(1).valueOf();
+        opt.end = moment(parseInt(time)).day(5).valueOf();
       } else if (opt.batchMode === "weekend") {
-        opt.start = moment(parseInt(time))
-          .day(6)
-          .valueOf();
-        opt.end = moment(parseInt(time))
-          .day(7)
-          .valueOf();
+        opt.start = moment(parseInt(time)).day(6).valueOf();
+        opt.end = moment(parseInt(time)).day(7).valueOf();
       } else if (opt.batchMode === "month") {
-        opt.start = moment(parseInt(time))
-          .startOf("month")
-          .valueOf();
-        opt.end = moment(parseInt(time))
-          .endOf("month")
-          .valueOf();
+        opt.start = moment(parseInt(time)).startOf("month").valueOf();
+        opt.end = moment(parseInt(time)).endOf("month").valueOf();
       } else if ((opt.start && opt.end) || (!opt.start && !opt.end)) {
         opt.start = handleStart(time);
         opt.end = false;
@@ -1957,7 +1921,7 @@
       clearHovering();
       if (opt.start && !opt.end) {
         $(self).trigger("datepicker-first-date-selected", {
-          date1: new Date(opt.start)
+          date1: new Date(opt.start),
         });
         dayHovering(day);
       }
@@ -2038,21 +2002,13 @@
     }
 
     function updateSelectableRange() {
-      box
-        .find(".day.invalid.tmp")
-        .removeClass("tmp invalid")
-        .addClass("valid");
+      box.find(".day.invalid.tmp").removeClass("tmp invalid").addClass("valid");
       if (opt.start && !opt.end) {
-        box.find(".day.toMonth.valid").each(function() {
+        box.find(".day.toMonth.valid").each(function () {
           var time = parseInt($(this).attr("time"), 10);
           if (!isValidTime(time))
-            $(this)
-              .addClass("invalid tmp")
-              .removeClass("valid");
-          else
-            $(this)
-              .addClass("valid tmp")
-              .removeClass("invalid");
+            $(this).addClass("invalid tmp").removeClass("valid");
+          else $(this).addClass("valid tmp").removeClass("invalid");
         });
       }
 
@@ -2073,7 +2029,7 @@
           box.find(".day.hovering").removeClass("hovering");
           day.addClass("hovering");
         } else {
-          box.find(".day").each(function() {
+          box.find(".day").each(function () {
             var time = parseInt($(this).attr("time")),
               start = opt.start,
               end = opt.end;
@@ -2121,19 +2077,19 @@
         var w = $tip
           .css({
             visibility: "hidden",
-            display: "none"
+            display: "none",
           })
           .html(tooltip)
           .width();
         var h = $tip.height();
         _left -= w / 2;
         _top -= h;
-        setTimeout(function() {
+        setTimeout(function () {
           $tip.css({
             left: _left,
             top: _top,
             display: "block",
-            visibility: "visible"
+            visibility: "visible",
           });
         }, 10);
       } else {
@@ -2204,15 +2160,9 @@
       if (opt.singleDate) {
         // Validate if only start is there
         if (opt.start && !opt.end)
-          box
-            .find(".drp_top-bar")
-            .removeClass("error")
-            .addClass("normal");
+          box.find(".drp_top-bar").removeClass("error").addClass("normal");
         else
-          box
-            .find(".drp_top-bar")
-            .removeClass("error")
-            .removeClass("normal");
+          box.find(".drp_top-bar").removeClass("error").removeClass("normal");
       } else if (opt.maxDays && days > opt.maxDays) {
         opt.start = false;
         opt.end = false;
@@ -2235,15 +2185,9 @@
           .html(translate("more-than").replace("%d", opt.minDays));
       } else {
         if (opt.start || opt.end)
-          box
-            .find(".drp_top-bar")
-            .removeClass("error")
-            .addClass("normal");
+          box.find(".drp_top-bar").removeClass("error").addClass("normal");
         else
-          box
-            .find(".drp_top-bar")
-            .removeClass("error")
-            .removeClass("normal");
+          box.find(".drp_top-bar").removeClass("error").removeClass("normal");
       }
 
       if (
@@ -2295,7 +2239,7 @@
         if (initiated && !silent) {
           $(self).trigger("datepicker-change", {
             value: dateRange,
-            date1: new Date(opt.start)
+            date1: new Date(opt.start),
           });
         }
       } else if (opt.start && opt.end) {
@@ -2319,7 +2263,7 @@
           $(self).trigger("datepicker-change", {
             value: dateRange,
             date1: new Date(opt.start),
-            date2: new Date(opt.end)
+            date2: new Date(opt.end),
           });
         }
       } else if (forceValid) {
@@ -2422,14 +2366,12 @@
 
     function showSelectedDays() {
       if (!opt.start && !opt.end) return;
-      box.find(".day").each(function() {
+      box.find(".day").each(function () {
         var time = parseInt($(this).attr("time")),
           start = opt.start,
           end = opt.end;
         if (opt.time.enabled) {
-          time = moment(time)
-            .startOf("day")
-            .valueOf();
+          time = moment(time).startOf("day").valueOf();
           start = moment(start || moment().valueOf())
             .startOf("day")
             .valueOf();
@@ -2470,7 +2412,7 @@
         }
       });
 
-      box.find(".week-number").each(function() {
+      box.find(".week-number").each(function () {
         if ($(this).attr("data-start-time") == opt.startWeek) {
           $(this).addClass("week-number-selected");
         }
@@ -2533,10 +2475,10 @@
           minSelectable: minSelectableMonth,
           maxSelectable: maxSelectableMonth,
           minVisible: minVisibleMonth,
-          maxVisible: maxVisibleMonth
+          maxVisible: maxVisibleMonth,
         },
         currentMonth,
-        function(value) {
+        function (value) {
           return nameMonth(value);
         }
       );
@@ -2589,7 +2531,7 @@
           minSelectable: minSelectableYear,
           maxSelectable: maxSelectableYear,
           minVisible: minVisibleYear,
-          maxVisible: maxVisibleYear
+          maxVisible: maxVisibleYear,
         },
         currentYear
       );
@@ -2600,7 +2542,7 @@
       var data = [];
       valueBeautifier =
         valueBeautifier ||
-        function(value) {
+        function (value) {
           return value;
         };
 
@@ -2609,7 +2551,7 @@
           value: i,
           text: valueBeautifier(i),
           selected: i === current,
-          disabled: i < range.minSelectable || i > range.maxSelectable
+          disabled: i < range.minSelectable || i > range.maxSelectable,
         });
       }
 
@@ -2651,21 +2593,21 @@
       box
         .find(".day")
         .off("click")
-        .click(function(evt) {
+        .click(function (evt) {
           dayClicked($(this));
         });
 
       box
         .find(".day")
         .off("mouseenter")
-        .mouseenter(function(evt) {
+        .mouseenter(function (evt) {
           dayHovering($(this));
         });
 
       box
         .find(".day")
         .off("mouseleave")
-        .mouseleave(function(evt) {
+        .mouseleave(function (evt) {
           box.find(".date-range-length-tip").hide();
           if (opt.singleDate) {
             clearHovering();
@@ -2675,21 +2617,21 @@
       box
         .find(".week-number")
         .off("click")
-        .click(function(evt) {
+        .click(function (evt) {
           weekNumberClicked($(this));
         });
 
       box
         .find(".month")
         .off("change")
-        .change(function(evt) {
+        .change(function (evt) {
           dateChanged($(this));
         });
 
       box
         .find(".year")
         .off("change")
-        .change(function(evt) {
+        .change(function (evt) {
           dateChanged($(this));
         });
     }
@@ -2734,10 +2676,10 @@
     function closeDatePicker() {
       if (opt.alwaysOpen) return;
 
-      var afterAnim = function() {
+      var afterAnim = function () {
         $(self).data("date-picker-opened", false);
         $(self).trigger("datepicker-closed", {
-          relatedTarget: box
+          relatedTarget: box,
         });
       };
       if (opt.customCloseAnimation) {
@@ -2746,7 +2688,7 @@
         $(box).slideUp(opt.duration, afterAnim);
       }
       $(self).trigger("datepicker-close", {
-        relatedTarget: box
+        relatedTarget: box,
       });
     }
 
@@ -2774,15 +2716,11 @@
     }
 
     function nextMonth(month) {
-      return moment(month)
-        .add(1, "months")
-        .toDate();
+      return moment(month).add(1, "months").toDate();
     }
 
     function prevMonth(month) {
-      return moment(month)
-        .add(-1, "months")
-        .toDate();
+      return moment(month).add(-1, "months").toDate();
     }
 
     function getTimeHTML() {
@@ -3109,7 +3047,7 @@
 
     function getGapHTML() {
       var html = [
-        '<div class="gap-top-mask"></div><div class="gap-bottom-mask"></div><div class="gap-lines">'
+        '<div class="gap-top-mask"></div><div class="gap-bottom-mask"></div><div class="gap-lines">',
       ];
       for (var i = 0; i < 20; i++) {
         html.push(
@@ -3131,7 +3069,7 @@
     function attributesCallbacks(initialObject, callbacksArray, today) {
       var resultObject = $.extend(true, {}, initialObject);
 
-      $.each(callbacksArray, function(cbAttrIndex, cbAttr) {
+      $.each(callbacksArray, function (cbAttrIndex, cbAttr) {
         var addAttributes = cbAttr(today);
         for (var attr in addAttributes) {
           if (resultObject.hasOwnProperty(attr)) {
@@ -3178,15 +3116,13 @@
             type: "lastMonth",
             day: day.getDate(),
             time: day.getTime(),
-            valid: valid
+            valid: valid,
           });
         }
       }
       var toMonth = d.getMonth();
       for (var i = 0; i < 40; i++) {
-        today = moment(d)
-          .add(i, "days")
-          .toDate();
+        today = moment(d).add(i, "days").toDate();
         valid = isValidTime(today.getTime());
         if (opt.startDate && compare_day(today, opt.startDate) < 0)
           valid = false;
@@ -3196,7 +3132,7 @@
           type: today.getMonth() == toMonth ? "toMonth" : "nextMonth",
           day: today.getDate(),
           time: today.getTime(),
-          valid: valid
+          valid: valid,
         });
       }
       var html = [];
@@ -3234,7 +3170,7 @@
               " " +
               (today.valid ? "valid" : "invalid") +
               " " +
-              (highlightToday ? "real-today" : "")
+              (highlightToday ? "real-today" : ""),
           };
 
           if (day === 0 && opt.showWeekNumbers) {

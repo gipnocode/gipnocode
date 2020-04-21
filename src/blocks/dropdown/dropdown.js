@@ -1,5 +1,5 @@
 /* eslint-disable func-names */
-(function($) {
+(function ($) {
   const defaults = {
     maxItems: Infinity,
     minItems: 0,
@@ -11,7 +11,7 @@
       position: "right",
       displayCls: "iqdropdown-content",
       controlsCls: "iqdropdown-item-controls",
-      counterCls: "counter"
+      counterCls: "counter",
     },
 
     items: {},
@@ -27,18 +27,18 @@
       } else {
         return `${totalItems} ${text}`;
       }
-    }
+    },
   };
 
-  $.fn.iqDropdown = function(options) {
-    this.each(function() {
+  $.fn.iqDropdown = function (options) {
+    this.each(function () {
       const $this = $(this);
       const $selection = $this.find("p.iqdropdown-selection").last();
       const $menu = $this.find("div.iqdropdown-menu");
       const $items = $menu.find("div.iqdropdown-menu-option");
       const dataAttrOptions = {
         selectionText: $selection.data("selection-text"),
-        textPlural: $selection.data("text-plural")
+        textPlural: $selection.data("text-plural"),
       };
       const settings = $.extend(true, {}, defaults, dataAttrOptions, options);
       const itemCount = {};
@@ -54,7 +54,7 @@
 
         settings.items[id] = {
           minCount: Number.isNaN(Number(minCount)) ? 0 : minCount,
-          maxCount: Number.isNaN(Number(maxCount)) ? Infinity : maxCount
+          maxCount: Number.isNaN(Number(maxCount)) ? Infinity : maxCount,
         };
       }
 
@@ -83,7 +83,7 @@
           $item.prepend($controls);
         }
 
-        $decrementButton.click(event => {
+        $decrementButton.click((event) => {
           const { items, minItems, beforeDecrement, onChange } = settings;
           const allowClick = beforeDecrement(id, itemCount);
 
@@ -102,7 +102,7 @@
           event.preventDefault();
         });
 
-        $incrementButton.click(event => {
+        $incrementButton.click((event) => {
           const { items, maxItems, beforeIncrement, onChange } = settings;
           const allowClick = beforeIncrement(id, itemCount);
 
@@ -121,7 +121,7 @@
           event.preventDefault();
         });
 
-        $item.click(event => event.stopPropagation());
+        $item.click((event) => event.stopPropagation());
 
         return $item;
       }
@@ -130,7 +130,7 @@
         $this.toggleClass("menu-open");
       });
 
-      $items.each(function() {
+      $items.each(function () {
         const $item = $(this);
         const id = $item.data("id");
         const defaultCount = Number($item.data("defaultcount") || "0");

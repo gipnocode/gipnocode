@@ -1,9 +1,9 @@
-const init = function() {
+const init = function () {
   document.getElementById("button.button").addEventListener("click", reset);
   // document.getElementById("button").addEventListener("click", send);
 };
 
-const reset = function(ev) {
+const reset = function (ev) {
   //HTML will automatically put the form back to its initial state
   //unless we do
   ev.preventDefault();
@@ -11,10 +11,10 @@ const reset = function(ev) {
   document.getElementById("form.form").reset();
   //if you want to do anything else...
 };
-$(function() {
+$(function () {
   //задание заполнителя с помощью параметра placeholder
   $(".input-field_date").mask("99.99.9999", {
-    placeholder: "дд.мм.гггг"
+    placeholder: "дд.мм.гггг",
   });
   //задание заполнителя с помощью параметра placeholder
   // $("#index").mask("999999", {placeholder: " " });

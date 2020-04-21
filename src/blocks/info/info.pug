@@ -1,8 +1,10 @@
 mixin info(info)
+ -
  .info
   div.info-top
-   span.info_left-num= info.righthead
-   span.info_number= info.tophead
+   div.info_left-num= info.righthead
+    span.bold= info.price
+    span.info_number= info.tophead
   div.info_bottom
    div.rating(class= info.starName)
    a.info-number.to-room-rating(href= info.linkToRoom) #{info.bottomhead}

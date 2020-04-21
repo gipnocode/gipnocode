@@ -105,7 +105,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `[name].[hash].css`,
     }),
-    // new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(),
       ...PAGES.map((page) => new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,
@@ -118,7 +118,7 @@ module.exports = {
       { from: `${PATHS.src}/blocks/logo/logo.svg`, to: `assets/img` },
       { from: `${PATHS.src}/layout/cards/img`, to: `assets/img` },
       { from: `${PATHS.src}/blocks/info/img`, to: `assets/img` },
-      { from: `${PATHS.src}/blocks/dropdown/images`, to: `assets/img` },
+      { from: `${PATHS.src}/layout/dropdown/images`, to: `assets/img` },
 
       { from: `${PATHS.src}/fonts/`, to: `assets/fonts` },
 

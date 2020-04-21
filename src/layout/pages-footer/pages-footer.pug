@@ -3,7 +3,7 @@ div.pages-footer-wrapper
  footer.pages-footer
   div.footer-logo
     a.pages-footer-logo(href="landing.html")
-     img.logo(src='assets/images/logo.svg')
+     include ../../blocks/logo/logo
     p.footer-logotext.
         Бронирование номеров в лучшем
         отеле 2019 года по версии
@@ -54,6 +54,9 @@ div.pages-footer-wrapper
     +input-field({placeholder: 'Email'})
      span.material-icons arrow_forward
     div.way_icon
-     i.fab.fa-twitter
-     i.fab.fa-facebook-f
-     i.fab.fa-instagram
+     ul
+      li i.fab.fa-twitter
+      li i.fab.fa-facebook-f
+      li i.fab.fa-instagram
+
+

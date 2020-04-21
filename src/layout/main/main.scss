@@ -15,12 +15,16 @@ html {
 body,
 html {
   width: 100%;
+  background-color: white;
+  font-family: Montserrat-Regular;
 }
 
 a {
   text-decoration: none;
 }
-
+.site-name {
+  display: none;
+}
 ul,
 li {
   list-style-type: none;

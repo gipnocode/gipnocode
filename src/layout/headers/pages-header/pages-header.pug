@@ -1,0 +1,27 @@
+include ../../../blocks/button/button
+div.pages-header-wrapper
+  header.pages-header
+    .mob-header
+      include ../../../blocks/logo/logo
+      .pages-header-log
+        span.pages-header-login Войти
+        span.pages-header-login Зарегистрироваться
+    nav.pages-header-nav
+      ul.pages-header-nav-list
+        li.pages-header-nav-item
+          a.pages-header-nav-link(href="/mock address/") О нас
+        li.pages-header-nav-item
+          a.pages-header-nav-link(href="/mock address/") Услуги
+          i.material-icons expand_more
+        li.pages-header-nav-item
+          a.pages-header-nav-link(href="/mock address/") Вакансии
+        li.pages-header-nav-item
+          a.pages-header-nav-link(href="/mock address/") Новости
+        li.pages-header-nav-item
+          a.pages-header-nav-link(href="/mock address/") Соглашения
+          i.material-icons expand_more
+      .pages-header-button
+        .header-rounded-corners-gradient-borders
+          +button({lineTitle: 'Войти', mods: 'style2, size1, border'})
+        .header-rounded-corners-gradient-borders-big
+          +button({lineTitle: 'Зарегистрироваться', mods: 'style1, border-big'})

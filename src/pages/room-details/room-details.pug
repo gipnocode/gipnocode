@@ -11,13 +11,13 @@ block content
     div.second-column
      img.second(src='assets/img/image 2.jpg')
      img(src='assets/img/image 3.jpg')
-   div.comment-section-wrapper
+   section.comment-section-wrapper
     div.cons
      h3 Сведения о номере
      each item in [{righthead: 'mood', tophead:'Комфорт',bottomtext:'Шумопоглощающие стены'},{righthead: 'domain', tophead:'Удобство',bottomhead:'Окно в каждой спальне'},{righthead: 'whatshot', tophead:'Уют',bottomhead:'Номер оснащен камином'},]
        +icon-info( item )
 
-   .comment-section-wrapper
+   section.comment-section-wrapper
     h2 Отзывы посетителей номера
     +comment({
       image: 'cadr.png',

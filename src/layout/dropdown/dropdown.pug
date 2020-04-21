@@ -1,0 +1,18 @@
+include ../../blocks/input/input
+.l-container
+ form(id="#drop", action=" ", method="get")
+  .custom.iqdropdown
+   p.iqdropdown-selection
+   .iqdropdown-menu
+    .iqdropdown-menu-option#one(data-id='adult' data-defaultcount='0' data-mincount='0')
+     div
+      p.iqdropdown-item.adult взрослые
+    .iqdropdown-menu-option(data-id='minor' data-defaultcount='0' data-mincount='0')
+     div
+      p.iqdropdown-item.minor дети
+    .iqdropdown-menu-option(data-id='infant')
+     div
+      p.iqdropdown-item.infant младенцы
+    div.button-wrapper
+     input(type="reset", value="очистить")
+     button(type="button").iqdropdown-menu-close применить

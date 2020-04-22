@@ -14,7 +14,6 @@ $(function () {
 
   $(".dinamic-calendar").dateRangePicker({
     separator: " to ",
-
     getValue: function () {
       if (
         $(".input-field_calendar-one").val() &&
@@ -31,20 +30,15 @@ $(function () {
       $(".input-field_calendar-one").val(s1);
       $(".input-field_calendar-two").val(s2);
     },
-
-    getValue: function () {
-      return this.innerHTML;
-    },
-    setValue: function (s) {
-      this.innerHTML = s;
-    },
     language: "ru",
     singleMonth: true,
     customArrowNextSymbol: '<i class="material-icons">arrow_forward</i>',
     customArrowPrevSymbol: '<i class="material-icons">arrow_back</i>',
     startOfWeek: "monday",
     showTopbar: false,
+    format: "DD.MM.GGGG",
   });
+
   $("#date-range16-close").click(function (evt) {
     evt.stopPropagation();
     $("#date-range16").data("dateRangePicker").close();

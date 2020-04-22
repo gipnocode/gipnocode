@@ -3,27 +3,24 @@ include ../../blocks/button/button
 
 form(action="#", method="post")
   legend Найдём номера под ваши пожелания
-  div.dinamic-calendar-wrapper
+  div.dinamic-calendar
     div.search-form-input-wrapper
       label(class="form-label" for="#calendar1") Прибытие
       +input-field({
-        type: 'date',
+        type: 'text',
         placeholder: 'дд.мм.гггг',
-        mods: 'input-field_calendar-one',
-        type: "text",
-        required: true,
+        mods: 'calendar-one',
         id: "calendar1"
       })
     div.search-form-input-wrapper
       label(class="form-label" for="#calendar2") Выезд
       +input-field({
-        type: 'date',
+        type: 'text',
         placeholder: 'дд.мм.гггг',
-        mods: 'input-field_calendar-two',
-        type: "text",
-        required: true,
+        mods: 'calendar-two',
         id: "calendar2"
       })
+
   div.search-form-dropdown-wrapper
     label(class="form-label" for="#drop") Гости
     include ../dropdown/dropdown

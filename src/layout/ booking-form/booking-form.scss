@@ -1,0 +1,37 @@
+.table-w {
+  margin-top: 10px;
+  margin-bottom: -15px;
+}
+.booking-form-table {
+  display: flex;
+}
+.td-text {
+  font-family: Montserrat-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+}
+.booking-form-table1 {
+  //background-color: yellow;
+  padding: 0.38em 0;
+}
+
+.booking-form-table2 {
+  //background-color: red;
+  text-align: right;
+  padding: 0.38em 0;
+  //color: red;
+}
+.booking-form-table-last {
+  font-family: OpenSans-Bold;
+  font-size: 19px;
+  line-height: 24px;
+  color: #1f2041;
+  padding-top: 1em;
+}
+.table-line-breack {
+  position: relative;
+  top: -5px;
+}

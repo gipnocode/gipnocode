@@ -1,0 +1,56 @@
+include ../../blocks/input/input
+include ../../blocks/button/button
+include ../../blocks/info/info
+form(action="#", method="post")
+  +info({
+      righthead: '№ 888 люкс',
+      price: '9 990₽',
+      tophead: ' в сутки',
+    })
+  div.dinamic-calendar
+    div.search-form-input-wrapper
+      label(class="form-label" for="#calendar1") Прибытие
+      +input-field({
+        type: 'text',
+        placeholder: 'дд.мм.гггг',
+        mods: 'calendar-one',
+        id: "calendar1"
+      })
+    div.search-form-input-wrapper
+      label(class="form-label" for="#calendar2") Выезд
+      +input-field({
+        type: 'text',
+        placeholder: 'дд.мм.гггг',
+        mods: 'calendar-two',
+        id: "calendar2"
+      })
+
+  div.search-form-dropdown-wrapper
+    label(class="form-label" for="#drop") Гости
+    include ../dropdown/dropdown
+    div.table-w
+      table.booking-form-table(cellspacing='0')
+        tr
+          td.td-text.booking-form-table1 9 990₽ х 4 суток
+          td.td-text.booking-form-table2 39 960₽
+
+        tr
+          td.td-text.booking-form-table1 Сбор за услуги: скидка 2 179₽ iiiii
+          td.td-text.booking-form-table2 0₽
+
+        tr
+          td.td-text.booking-form-table1 Сбор за дополнительные <br> <span class="table-line-breack">услуги iiiii</span>
+          td.td-text.booking-form-table2 300₽
+
+        tr
+          td.booking-form-table-last Итого
+          td.booking-form-table-last 38 081₽
+
+
+
+
+    div.search-form-button-wrapper
+      +button({
+        lineTitle: 'Забронировать',
+        mods: 'style1, size2, border-big'
+      })

@@ -1,15 +1,20 @@
 .cards-page-search-form-w {
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: 30px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
 }
 .cards-page-booking-form-w {
-  display: inline-block;
-  margin-top: 20px;
-  margin-left: 50px;
+  position: absolute;
+  top: 20px;
+  left: 450px;
 }
 .cards-page-static-calendar-w {
   position: absolute;
   top: 20px;
   right: 200px;
+}
+.cards-page-registration-form-w {
+  position: absolute;
+  top: 400px;
+  left: 30px;
 }

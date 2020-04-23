@@ -1,0 +1,22 @@
+include ../../blocks/input/input
+include ../../blocks/radio/radio
+include ../../blocks/toggle/toggle
+include ../../blocks/button/button
+form.form(method='post' name='singhup' id='singhup')
+  .form-wrapper20
+    legend  Войти
+  .form-wrapper10
+    +input-field({placeholder: 'Email', type: 'email'})
+  .form-wrapper20
+    +input-field({placeholder: 'Пароль', type: 'password'})
+  .form-wrapper30
+    +button({
+      lineTitle: 'войти',
+      mods: 'style1, size2, border-big'
+    })
+  .form-button-wrapper
+    p Нет аккаунта на Toxin?
+    +btn('создать',  'style2',  true, true)
+
+
+

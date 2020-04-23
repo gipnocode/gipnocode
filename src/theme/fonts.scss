@@ -87,6 +87,13 @@ legend {
 .form-wrapper30 {
   margin-bottom: 30px;
 }
+.form-wrapper40 {
+  margin-bottom: 40px;
+}
+.form-button-wrapper {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+}
 .form-label {
   display: block;
   font-family: Montserrat-Bold;

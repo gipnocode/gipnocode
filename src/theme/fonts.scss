@@ -78,7 +78,15 @@ legend {
   line-height: 30px;
   color: #1f2041;
 }
-
+.form-wrapper10 {
+  margin-bottom: 10px;
+}
+.form-wrapper20 {
+  margin-bottom: 20px;
+}
+.form-wrapper30 {
+  margin-bottom: 30px;
+}
 .form-label {
   display: block;
   font-family: Montserrat-Bold;
@@ -96,7 +104,7 @@ input[placeholder] {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
-  text-transform: uppercase;
+  //text-transform: uppercase;
   padding: 0.9em;
 }
 

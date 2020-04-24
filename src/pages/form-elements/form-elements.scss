@@ -1,79 +1,70 @@
-.form-elements-container {
-  width: 1160px;
-  //background-color: antiquewhite;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+.form-elements-text-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 300px;
 }
 .form-elements-toggle-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  //align-items: stretch;
-  //border: 1px solid gainsboro;
-  width: 260px;
-  height: 530px;
+  position: absolute;
+  top: 30px;
+  left: 450px;
+  width: 300px;
 }
-.checkbox-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 218px;
-  height: 140px;
-  //background-color: #e1e6f9;
-}
-.checkbox-wrapper:last-child {
-  display: inline-flex;
-}
-.radio-buttons-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  //background-color: yellow;
-  height: 60px;
-}
-.toggle-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 260px;
-  height: 95px;
-}
-
-.rate-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 60px;
-}
-.rw {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.like-wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 90px;
-  justify-content: space-between;
-}
-
-.lw {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.form-elements-text-wrapper {
+.form-elements-button-container {
+  position: absolute;
+  top: 30px;
+  left: 750px;
   width: 320px;
-  //height: 250px;
-  justify-content: space-between;
 }
-.title {
-  display: flex;
-  justify-content: space-between;
-  padding: 1em 0;
+.form-elements-comment-container {
+  position: absolute;
+  top: 1000px;
 }
-.third-container {
-  //background-color: red;
-}
+
+//.checkbox-wrapper:last-child {
+//  display: inline-flex;
+//}
+//.radio-buttons-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  //background-color: yellow;
+//  height: 60px;
+//}
+//.toggle-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  width: 260px;
+//  height: 95px;
+//}
+//
+//.rate-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: space-between;
+//  height: 60px;
+//}
+//.rw {
+//  display: flex;
+//  flex-direction: row;
+//  justify-content: space-between;
+//}
+//
+//.like-wrapper {
+//  display: flex;
+//  flex-direction: column;
+//  width: 90px;
+//  justify-content: space-between;
+//}
+//
+//.lw {
+//  display: flex;
+//  flex-direction: row;
+//  justify-content: space-between;
+//}
+//.form-elements-text-wrapper {
+//  width: 320px;
+//  //height: 250px;
+//  justify-content: space-between;
+//}

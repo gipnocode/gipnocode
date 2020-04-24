@@ -3,7 +3,7 @@ $nav-height: 2.2em;
 $nav-scrollbar-height: 1em;
 
 .pages-header-nav-link {
-  color: rgba(var(--color-primary), var(--opasity-05));
+  color: rgba(var(--default-color), var(--opasity-05));
   font-size: var(--text-sm);
   font-family: var(--first-font);
 }
@@ -12,7 +12,7 @@ $nav-scrollbar-height: 1em;
   min-width: 100%;
   margin: 0 auto;
   background-color: var(--white);
-  box-shadow: 0px 10px 20px rgba(var(--color-primary), var(--opasity-005));
+  box-shadow: 0px 10px 20px rgba(var(--default-color), var(--opasity-005));
 }
 @media (max-width: 991px) {
   .pages-header {

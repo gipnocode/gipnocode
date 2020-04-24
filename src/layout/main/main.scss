@@ -7,16 +7,16 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-size: var(--text-base-size);
 }
 html {
   overflow-x: hidden;
-  font-size: var(--text-base-size);
 }
 body,
 html {
   width: 100%;
   background-color: white;
-  color: $default-color;
+  color: var(--default-color);
   font-family: Montserrat-Regular;
 }
 

@@ -18,7 +18,7 @@
     margin: 0;
     cursor: pointer;
     border: 1px solid rgba(31, 32, 65, 0.25);
-    background-color: var(--color8);
+    background-color: var(--white);
     transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
 
     &:after {
@@ -85,13 +85,7 @@
     }
   }
 }
-.toggle_lable {
-  font-family: inherit;
-  font-size: inherit;
-  font-style: inherit;
-  font-weight: inherit;
-  color: inherit;
-}
+
 .toggle-w {
   display: grid;
   grid-template-columns: 1fr 6fr;

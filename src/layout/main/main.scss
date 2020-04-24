@@ -1,4 +1,5 @@
 @import "../../theme/mixins";
+@import "src/theme/vars";
 html {
   box-sizing: border-box;
 }
@@ -10,15 +11,13 @@ html {
 html {
   overflow-x: hidden;
   font-size: var(--text-base-size);
-  //@include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 body,
 html {
   width: 100%;
   background-color: white;
+  color: $default-color;
   font-family: Montserrat-Regular;
-  font-size: 14px;
-  line-height: 18px;
 }
 
 a {
@@ -46,16 +45,10 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 380px;
-  padding: 40px 30px 25px 30px;
+.visiually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

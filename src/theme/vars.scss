@@ -1,4 +1,6 @@
 @import "fonts";
+$default-color: #1f2041;
+$opasity005: 0.05;
 
 html {
   --first-font: Montserrat-Regular;
@@ -7,9 +9,11 @@ html {
   --fifth-font: Material-Icon;
   --six-font: Font Awsome;
   --color-primary: 31, 32, 65;
-  --color6: #bc9cff;
+  --purple: #bc9cff;
+  --blue: #8ba4f9;
   --color7: #6fcf97;
-  --color8: #fff;
+  --white: #fff;
+
   --opasity-075: 0.75;
   --opasity-05: 0.5;
   --opasity-025: 0.25;

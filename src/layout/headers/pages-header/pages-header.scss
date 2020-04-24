@@ -11,7 +11,7 @@ $nav-scrollbar-height: 1em;
 .pages-header-wrapper {
   min-width: 100%;
   margin: 0 auto;
-  background-color: var(--color8);
+  background-color: var(--white);
   box-shadow: 0px 10px 20px rgba(var(--color-primary), var(--opasity-005));
 }
 @media (max-width: 991px) {
@@ -90,7 +90,7 @@ $nav-scrollbar-height: 1em;
     font-weight: bold;
     font-size: var(--text-sm);
     font-family: var(--first-font);
-    color: var(--color6);
+    color: var(--purple);
   }
   @media (min-width: 360px) {
     .pages-header-log {
@@ -155,9 +155,10 @@ $nav-scrollbar-height: 1em;
 }
 @include breakpoint(middle) {
   .pages-header-button {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.3fr 3fr;
+    grid-column-gap: 20px;
     align-items: center;
-    justify-content: space-between;
     width: 39.5%;
   }
 }

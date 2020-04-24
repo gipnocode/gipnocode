@@ -1,22 +1,23 @@
 include ../../blocks/checkbox/checkbox
 
-.dropdown
- input.dropdown-selector(type="checkbox")
- .dropdown-caption expandable checkbox list
- .dropdown-content
-  li
-   +checkbox('Завтрак')
-  li
-   +checkbox('Письменный стол')
-  li
-   +checkbox('Стул для кормления')
-  li
-   +checkbox('Кроватка')
-  li
-   +checkbox('Телевизор')
-  li
-   +checkbox('Шампунь')
-  li
-   +checkbox('Телевизор')
-  li
-   +checkbox('Шампунь')
+form(method='post' name='singhup' id='singhup')
+ fieldset.dropdown
+  input.dropdown-selector(type="checkbox")
+  legend.dropdown-caption expandable checkbox list
+  .dropdown-content
+   li
+    +checkbox('Завтрак')
+   li
+    +checkbox('Письменный стол')
+   li
+    +checkbox('Стул для кормления')
+   li
+    +checkbox('Кроватка')
+   li
+    +checkbox('Телевизор')
+   li
+    +checkbox('Шампунь')
+   li
+    +checkbox('Телевизор')
+   li
+    +checkbox('Шампунь')

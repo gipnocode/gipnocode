@@ -3,47 +3,44 @@ include ../../blocks/radio/radio
 include ../../blocks/toggle/toggle
 include ../../blocks/button/button
 
-.form-wrapper
-  form.form(method='post' name='singhup' id='singhup')
-    .form-wrapper20
-      legend  Регистрация аккаунта
-    .form-wrapper10
-      +input-field({placeholder: 'Имя', type: 'text'})
-    .form-wrapper10
-      +input-field({placeholder: 'Фамилия', type: 'text'})
-    .form-wrapper20
-      +radio-buttons({
-        radioButtonsSet: 'radio-buttons-test',
-        buttonsList: [
-          {
-            buttonTitle: 'Мужчина',
-            buttonValue: '1',
-            checked: true
-          },
-          {
-            buttonTitle: 'Женщина',
-            buttonValue: '2'
-          }
-        ]
-      })
-    .form-wrapper20
-      label(class="form-label" for="#birth-date") Дата рождения
-      +input-field({placeholder: 'ДД.ММ.ГГГГ', id: 'birth-date'})
-    .form-wrapper10
-      label(class="form-label" for="#email") Данные для входа в сервис
-      +input-field({placeholder: 'Email', type: 'email', id: 'email'})
-    .form-wrapper10
-      +input-field({placeholder: 'Пароль', type: 'password'})
-    .form-wrapper20
-      +toggle("Получать спецпредложения")
-    .form-wrapper30
-      +button({
-        lineTitle: 'перейти к оплате',
-        mods: 'style1, size2, border-big'
-      })
-    .registration-form-button-wrapper
-      p Уже есть аккаунт на Toxin
-      +btn('Войти',  'style2',  true, true)
+
+form.form(method='post' name='singhup' id='singhup')
+  h1.form-title  Регистрация аккаунта
+  .form-wrapper10
+    +input-field({placeholder: 'Имя', type: 'text'})
+  .form-wrapper10
+    +input-field({placeholder: 'Фамилия', type: 'text'})
+  .form-wrapper20
+    +radio-buttons({
+      radioButtonsSet: 'radio-buttons-test',
+      buttonsList: [
+        {
+          title: 'Мужчина',
+          value: '1',
+          checked: true
+        },
+        {
+          title: 'Женщина',
+          value: '2'
+        }
+      ]
+    })
+  .form-wrapper20
+    label(class="form-label", for="#birth-date") Дата рождения
+    +input-field({placeholder: 'ДД.ММ.ГГГГ', id: '#birth-date'})
+  .form-wrapper10
+    label(class="form-label", for="#email") Данные для входа в сервис
+    +input-field({placeholder: 'Email', type: 'email', id: '#email'})
+  .form-wrapper10
+    +input-field({placeholder: 'Пароль', type: 'password'})
+  .form-wrapper20
+    +toggle("Получать спецпредложения")
+  .form-wrapper30
+    +btn('зарегестрироваться', 'theme-main', true)
+  .form-button-wrapper
+    span Уже есть аккаунт на Toxin
+    .rounded-corners-gradient-borders
+      +btn('Войти',  'theme-secondary')(href="/mocke me")
 
 
 

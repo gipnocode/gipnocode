@@ -11,17 +11,17 @@ mixin radio-buttons(props={})
 
  .radio-buttons(class = moduleClass + allMods)
   each buttonString, index in buttonsList
-   - const {buttonTitle, checked, buttonValue} = buttonString
-   label.form-label
+   - const {title, checked, value} = buttonString
+   label(tabindex='0').form-label
     input.radio-buttons__input(
      type  = 'radio',
      name  = radioButtonsSet,
-     value = buttonValue,
+     value = value,
      checked = checked ? checked : false
     )
     span.radio-buttons__marker
     |
-    = buttonTitle
+    = title
 
     //TODO: добавить тег с текстом, для изменения цвета шрифта
 

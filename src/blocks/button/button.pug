@@ -38,7 +38,7 @@ mixin btn(text, mods, isInput, required)
 
   //- передан href — это ссылка
   if (attributes.href)
-    a.button(class=allMods)&attributes(attributes)!= text
+    a.button.button_link(class=allMods)&attributes(attributes)!= text
     block
 
   //- иначе, если передан isInput и он true, это input
@@ -49,3 +49,5 @@ mixin btn(text, mods, isInput, required)
   else
     button.button(class=allMods)&attributes(attributes)!= text
     block
+
+

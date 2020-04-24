@@ -1,8 +1,8 @@
 include ../../blocks/input/input
 include ../../blocks/button/button
 
-form(action="#", method="post")
-  legend Найдём номера под ваши пожелания
+form.form(action="#", method="post")
+  h1.form-title Найдём номера под ваши пожелания
   div.dinamic-calendar
     div.search-form-input-wrapper
       label(class="form-label" for="#calendar1") Прибытие
@@ -25,8 +25,5 @@ form(action="#", method="post")
     label(class="form-label" for="#drop") Гости
     include ../dropdown/dropdown
     div.search-form-button-wrapper
-      +button({
-        lineTitle: 'Подобрать номер',
-        mods: 'style1, size2, border-big'
-      })
+      +btn('подобрать номер', 'theme-main')(href="/mocke me")
 

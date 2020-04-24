@@ -1,7 +1,10 @@
-mixin checkbox(label, checked=false)
- .checkbox-w
-  input.checkbox-button(type="checkbox" checked=checked)
-  label.checkbox-button_lable= label
+mixin checkbox(label, name, checked=false)
+ -
+  //в чекбох value можно не указывать, это нужно для радио
+  var checkboxName='product'
+ label.checkbox-w
+  input.checkbox-button(type="checkbox", name=`${checkboxName}`, checked=checked)
+  span.checkbox-button_lable= label
 
 
 

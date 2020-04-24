@@ -1,7 +1,7 @@
 include ../../blocks/input/input
 include ../../blocks/button/button
 include ../../blocks/info/info
-form(action="#", method="post")
+form.form(action="#", method="post")
   +info({
       righthead: '№ 888 люкс',
 
@@ -51,7 +51,4 @@ form(action="#", method="post")
 
 
     div.search-form-button-wrapper
-      +button({
-        lineTitle: 'Забронировать',
-        mods: 'style1, size2, border-big'
-      })
+      +btn('забронировать', 'theme-main')(href="/mocke me")

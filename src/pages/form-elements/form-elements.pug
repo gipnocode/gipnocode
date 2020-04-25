@@ -132,11 +132,15 @@ block content
 
 
   .form-elements-button-container
-    .form-wrapper20
-      .form-flex-row
-        label.form-label(for='nine') Range Slider
-        span.state-description 5 000₽ - 10 000₽
-      include ../../blocks/range-slider/range-slider
+    .range-slider-wrapper
+      .form-wrapper20
+        .form-flex-row
+          label.form-label(for='nine') Range Slider
+          .extra-controls
+            input.js-input-from(type='text' value='0')
+            span.range-slider-tire -
+            input.js-input-to(type='text' value='0')
+        include ../../blocks/range-slider/range-slider
 
     .grid-tabel
       +btn('click me', 'theme-main')(href="/mocke me")

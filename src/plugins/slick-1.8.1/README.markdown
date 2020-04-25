@@ -77,8 +77,8 @@ arrows | boolean | true | Enable Next/Prev arrows
 asNavFor | string | $(element) | Enables syncing of multiple sliders
 autoplay | boolean | false | Enables auto play of slides
 autoplaySpeed | int  | 3000 | Auto play change interval
-centermods | boolean | false | Enables centered view with partial prev/next slides. Use with odd numbered slidesToShow counts.
-centerPadding | string | '50px' | Side padding when in center mods. (px or %)
+centerMode | boolean | false | Enables centered view with partial prev/next slides. Use with odd numbered slidesToShow counts.
+centerPadding | string | '50px' | Side padding when in center mode. (px or %)
 cssEase | string |  'ease' | CSS3 easing
 customPaging | function | n/a | Custom paging templates. See source for use example.
 dots | boolean | false | Current slide indicator dots
@@ -100,10 +100,10 @@ pauseOnHover | boolean | true | Pauses autoplay on hover
 prevArrow | string (html \| jQuery selector) \| object (DOM node \| jQuery object) | `<button type="button" class="slick-prev">Previous</button>` | Allows you to select a node or customize the HTML for the "Previous" arrow.
 respondTo | string | 'window' | Width that responsive object responds to. Can be 'window', 'slider' or 'min' (the smaller of the two).
 responsive | array | null | Array of objects [containing breakpoints and settings objects (see example)](#responsive-option-example). Enables settings at given `breakpoint`. Set `settings` to "unslick" instead of an object to disable slick at a given breakpoint.
-rows | int | 1 | Setting this to more than 1 initializes grid mods. Use slidesPerRow to set how many slides should be in each row.
+rows | int | 1 | Setting this to more than 1 initializes grid mode. Use slidesPerRow to set how many slides should be in each row.
 rtl | boolean | false | Change the slider's direction to become right-to-left
 slide | string | '' | Slide element query
-slidesPerRow | int | 1 | With grid mods initialized via the rows option, this sets how many slides are in each grid row.
+slidesPerRow | int | 1 | With grid mode initialized via the rows option, this sets how many slides are in each grid row.
 slidesToScroll | int | 1 | # of slides to scroll at a time
 slidesToShow | int | 1 | # of slides to show at a time
 speed | int | 300 | Transition speed
@@ -186,7 +186,7 @@ afterChange | event, slick, currentSlide | After slide change callback
 beforeChange | event, slick, currentSlide, nextSlide | Before slide change callback
 breakpoint | event, slick, breakpoint | Fires after a breakpoint is hit
 destroy | event, slick | When slider is destroyed, or unslicked.
-edge | event, slick, direction | Fires when an edge is overscrolled in non-infinite mods.
+edge | event, slick, direction | Fires when an edge is overscrolled in non-infinite mode.
 init | event, slick | When Slick initializes for the first time callback. Note that this event should be defined before initializing the slider.
 reInit | event, slick | Every time Slick (re-)initializes callback
 setPosition | event, slick | Every time Slick recalculates position
@@ -277,7 +277,7 @@ $slick-dot-size | pixels | 6px | Size of the navigation dots
 
 #### Browser support
 
-Slick works on IE8+ in addition to other modsrn browsers such as Chrome, Firefox, and Safari.
+Slick works on IE8+ in addition to other modern browsers such as Chrome, Firefox, and Safari.
 
 #### Dependencies
 

@@ -130,7 +130,14 @@ block content
       num: '12'
     })
 
+
   .form-elements-button-container
+    .form-wrapper20
+      .form-flex-row
+        label.form-label(for='nine') Range Slider
+        span.state-description 5 000₽ - 10 000₽
+      include ../../blocks/range-slider/range-slider
+
     .grid-tabel
       +btn('click me', 'theme-main')(href="/mocke me")
       +btn('click me', 'theme-main')(href="/mocke me")
@@ -140,8 +147,12 @@ block content
         +btn('click me', 'theme-secondary')(href="/mocke me")
       +btn('click me', 'theme-text')(href="/mocke me")
       +btn('click me', 'theme-text')(href="/mocke me")
-    .grid-tabel-big
+    .form-wrapper40
       +btn('перейти к оплате', 'theme-main', true)
+    .form-grid-column-10
+      .form-wrapper5
+        span.input-groop-title pagination
+        include ../../blocks/pagination/pagination
 
 
 

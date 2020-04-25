@@ -1,0 +1,21 @@
+.container
+  .row
+    .col-12
+      .pagination
+        .pagination__list
+          .pagination__item.pagination__item_active
+            span.pagination__text 1
+          .pagination__item
+            a.pagination__link(title='Страница: 2' href='#')
+              span.pagination__text 2
+          .pagination__item
+            a.pagination__link(title='Страница: 3' href='#')
+              span.pagination__text 3
+          span.pagination__item.pagination__dots ...
+          .pagination__item
+            a.pagination__link(title='Страница: 15' href='#')
+              span.pagination__text 15
+        .pagination__item.pagination__item_arrow.pagination__item_arrow_next
+          a.pagination__link(title='Следующая страница' href='#')
+            span.pagination__icon
+              i.material-icons.material-icons-left arrow_back

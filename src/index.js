@@ -1,6 +1,8 @@
 import "./plugins/jquery-date-range-picker-master/src/jquery.daterangepicker";
 import "./plugins/jquery.maskedinput/jquery.maskedinput";
 import "item-quantity-dropdown/lib/item-quantity-dropdown.min";
+import "./plugins/ion.rangeSlider-master/js/ion.rangeSlider.min";
+import "./plugins/ion.rangeSlider-master/css/ion.rangeSlider.min.css";
 function importAll(resolve) {
   resolve.keys().forEach(resolve);
 }

@@ -1,6 +1,6 @@
 mixin radio-buttons(props={})
  -
-  const {mods, moduleClass, buttonsList, radioButtonsSet} = props
+  const {mods, moduleClass, buttonsList} = props
   let allMods = ''
   if (typeof(mods) !== 'undefined' && mods) {
    let modList = mods.split(',')
@@ -15,7 +15,6 @@ mixin radio-buttons(props={})
    label(tabindex='0').form-label
     input.radio-buttons__input(
      type  = 'radio',
-     name  = radioButtonsSet,
      value = value,
      checked = checked ? checked : false
     )

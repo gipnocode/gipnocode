@@ -1,72 +1,39 @@
-.form-elements-text-wrapper {
+.form-elements-text-fields-wrapper {
   position: absolute;
   top: 30px;
   left: 30px;
-  width: 300px;
+  width: 320px;
+}
+.short-dropdown-wrapper {
+  width: 266px;
 }
 .form-elements-toggle-wrapper {
   position: absolute;
   top: 30px;
-  left: 450px;
-  width: 300px;
+  left: 475px;
+  width: 320px;
 }
 .form-elements-button-container {
   position: absolute;
   top: 30px;
-  left: 750px;
+  left: 868px;
   width: 320px;
 }
+
 .form-elements-comment-container {
   position: absolute;
   top: 1000px;
 }
-.range-slider-wrapper {
+.short-width-wrapper {
   width: 266px;
 }
-//.checkbox-wrapper:last-child {
-//  display: inline-flex;
-//}
-//.radio-buttons-wrapper {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//  //background-color: yellow;
-//  height: 60px;
-//}
-//.toggle-wrapper {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//  width: 260px;
-//  height: 95px;
-//}
-//
-//.rate-wrapper {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//  height: 60px;
-//}
-//.rw {
-//  display: flex;
-//  flex-direction: row;
-//  justify-content: space-between;
-//}
-//
-//.like-wrapper {
-//  display: flex;
-//  flex-direction: column;
-//  width: 90px;
-//  justify-content: space-between;
-//}
-//
-//.lw {
-//  display: flex;
-//  flex-direction: row;
-//  justify-content: space-between;
-//}
-//.form-elements-text-wrapper {
-//  width: 320px;
-//  //height: 250px;
-//  justify-content: space-between;
-//}
+.expandable-checkbox-drop-w {
+  position: absolute;
+  top: 1000px;
+  bottom: 50px;
+}
+.wrapper-margin-top100 {
+  position: absolute;
+  top: 1350px;
+  bottom: 50px;
+}

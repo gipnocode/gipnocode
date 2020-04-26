@@ -1,40 +1,17 @@
-.star-rating {
-  font-size: 0;
-}
-.star-rating__wrap {
+.rating {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  width: 120px;
-}
-.star-rating__wrap:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.star-rating__ico {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 20px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #bc9cff;
-}
-.star-rating__ico:last-child {
-  padding-left: 0;
-}
-.star-rating__input {
-  display: none;
-}
-.star-rating__ico:hover:before,
-.star-rating__ico:hover ~ .star-rating__ico:before,
-.star-rating__input:checked ~ .star-rating__ico:before {
-  content: "\f005";
-}
-.rate-button {
-  display: flex;
-  justify-content: space-between;
-  width: 118px;
+  user-select: none;
+
+  &__icon {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.5rem;
+    display: inline-block;
+    line-height: 1rem;
+    text-transform: none;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

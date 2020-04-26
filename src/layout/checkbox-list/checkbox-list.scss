@@ -1,4 +1,4 @@
-.dropdown {
+.checkbox-dropdown {
   width: 266px;
   box-sizing: border-box;
   position: relative;
@@ -23,8 +23,9 @@
     height: 100%;
     z-index: 1;
     opacity: 0;
+    border: none;
   }
-  .dropdown-content {
+  .checkbox-dropdown-content {
     position: relative;
     z-index: 2;
     box-sizing: border-box;
@@ -40,15 +41,13 @@
     }
   }
 
-  .dropdown-selector:checked ~ .dropdown-content {
+  .dropdown-selector:checked ~ .checkbox-dropdown-content {
     max-height: 500px;
     opacity: 1;
   }
 }
 
-.dropdown {
-  font-family: Proxima Nova, Arial, sans-serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+.checkbox-dropdown {
   font-size: 14px;
 
   .dropdown-caption {

@@ -1,19 +1,17 @@
 .cont {
-  margin: 5px auto 300px auto;
   display: grid;
-  grid-template-columns: 28% 72%;
+  grid-template-columns: 266px 900px;
   width: 1160px;
+  margin: 0 auto;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 266px;
 }
 .card-galery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;
   grid-row-gap: 2.8em;
-}
-h2 {
-  font-family: Quicksand;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 28px;
-  color: #1f2041;
 }

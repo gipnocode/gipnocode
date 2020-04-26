@@ -7,38 +7,47 @@ include ../../blocks/input/input
 include ../../blocks/info/info
 include ../../layout/comment/comment
 include ../../blocks/button/button
+include ../../blocks/rate/rate
+include ../../layout/dropdown/mix
 block variables
- - let pageClass = 'form-elements';
+  - let pageClass = 'form-elements';
 
 block content
-  .form-elements-text-wrapper
+  .form-elements-text-fields-wrapper
     .form-wrapper20
       .form-flex-row
         label.form-label(for='one') text field
         span.state-description default
       +input-field({placeholder: 'Email', id: 'one'})
+
     .form-wrapper20
       .form-flex-row
         label.form-label(for='two') text field
         span.state-description hover / focus
       +input-field({placeholder: 'This is pretty awesome', id: 'two'})
+
     .form-wrapper20
       .form-flex-row
-        label.form-label(for='three') dropdaun
+        label.form-label(for='two') dropdown
         span.state-description default
-      include ../../layout/dropdown/dropdown
-    .form-wrapper30
+      +dropdown({
+        defaultFieldTitle: 'Сколько гостей',
+        dropdownList: [{}]
+        })
+
+    .form-wrapper35
       .form-flex-row
         label.form-label(for='fourth') masked text field
         span.state-description default
       +input-field({placeholder: 'дд.мм.гггг', mods: 'date', id: 'fourth'})
+
     .form-wrapper20
       div.dinamic-calendar
         div.search-form-input-wrapper
           label(class="form-label" for="#calendar1") date Dropdown
           +input-field({
             type: 'text',
-            placeholder: 'дд.мм.гггг',
+            placeholder: 'ДД.ММ.ГГГГ',
             mods: 'calendar-one',
             id: "calendar1"
           })
@@ -46,94 +55,161 @@ block content
           label(class="form-label" for="#calendar2") date Dropdown
           +input-field({
             type: 'text',
-            placeholder: 'дд.мм.гггг',
+            placeholder: 'ДД.ММ.ГГГГ',
             mods: 'calendar-two',
             id: "calendar2"
           })
-    .form-wrapper20
-      label.form-label(for='eight') filter date dropdown
-      +input-field({placeholder: '18авг-23авг', mods: 'date', id: 'eight'})
+
+    .form-wrapper40
+      .short-dropdown-wrapper
+        label.form-label(for='eight') filter date dropdown
+        +input-field({placeholder: '18 авг - 23 авг', mods: 'date', id: 'eight'})
+
+    .form-wrapper100
+      .short-dropdown-wrapper
+        label.form-label(for='fifth') subscription text-field
+        +input-field({placeholder: 'Email', id: 'fifth'})
 
     .form-wrapper20
-      label.form-label(for='fifth') subscription text-field
-      +input-field({placeholder: 'Email', id: 'fifth'})
-    .form-wrapper20
-      .form-flex-row
-        label.form-label(for='six') dropdown
-        span.state-description default
-      include ../../layout/dropdown/dropdown
-    .form-wrapper20
-      .form-flex-row
-        label.form-label(for='seven') dropdown
-        span.state-description expanded
-      include ../../layout/dropdown/dropdown
-    include ../../layout/checkbox-list/checkbox-list
-    include ../../layout/checkbox-list/checkbox-list
-    div.cons
-      each item in [{righthead: 'mood', tophead:'Комфорт',bottomtext:'Шумопоглощающие стены'},{righthead: 'domain', tophead:'Удобство',bottomhead:'Окно в каждой спальне'},]
-        +icon-info( item )
+      .short-width-wrapper
+        .form-flex-row
+          label.form-label(for='six') dropdown
+          span.state-description default
+        +dropdown({
+          defaultFieldTitle: '2 спальни, 2 кровати',
+          dropdownList: [{}]
+        })
+
+    .form-wrapper100
+      .short-width-wrapper
+        .form-flex-row
+          label.form-label(for='three') dropdown
+          span.state-description expanded
+        +dropdown({
+          mods: 'absolute, active',
+          defaultFieldTitle: 'Сколько спален и кроватей',
+          dropdownList: [
+            {
+              name: 'rooms',
+              default: '2',
+              title: 'Спальни',
+              wordforms: 'Спальня Спальни Спален',
+            },
+            {
+              name: 'beds',
+              default: '2',
+              title: 'Кровати',
+              wordforms: 'Кровать Кровати Кроватей',
+            },
+            {
+              name: 'bath',
+              default: '2',
+              title: 'Ванные комнаты'
+            }
+          ]
+        })
+
+      .expandable-checkbox-drop-w
+        include ../../layout/checkbox-list/checkbox-list
+        include ../../layout/checkbox-list/checkbox-list
+      .wrapper-margin-top100
+         div.cons
+           each item in [{righthead: 'mood', tophead:'Комфорт',bottomtext:'Шумопоглощающие стены'},{righthead: 'domain', tophead:'Удобство',bottomhead:'Окно в каждой спальне'},]
+             +icon-info( item )
+
+
+
+
+
+
+
 
 
   .form-elements-toggle-wrapper
-    .form-grid-column-10
-      .form-wrapper5
-        span.input-groop-title checkbox buttons
-      +checkbox('Можно курить')
-      +checkbox('Можно с питтомцами')
-      +checkbox('Можно пригласить гостей (до 10 человек)')
-    .form-grid-column-10
-      .form-wrapper5
-        span.input-groop-title radio buttons
-      +radio-buttons({
-        labelTitle: 'RADIO BUTTONS',
-        radioButtonsSet: 'radio-buttons-test',
-        buttonsList: [
+    .form-wrapper30
+      .form-grid-column-10
+        .form-wrapper5
+          span.input-groop-title checkbox buttons
+        +checkbox('Можно курить')
+        +checkbox('Можно с питтомцами')
+        +checkbox('Можно пригласить гостей (до 10 человек)')
+
+    .form-wrapper35
+      .form-grid-column-10
+        .form-wrapper5
+          span.input-groop-title radio buttons
+        +radio-buttons({
+          labelTitle: 'RADIO BUTTONS',
+          buttonsList: [
+            {
+              title: 'Мужчина',
+              value: '1',
+              checked: true
+            },
+            {
+              title: 'Женщина',
+              value: '2'
+            }
+          ]
+        })
+    .form-wrapper35
+      .form-grid-column-10
+        .form-wrapper5
+          span.input-groop-title toggle
+        +toggle('Получать спецпредложения')
+        +toggle('Получать спецпредложения')
+
+    .form-wrapper40
+      .form-grid-column-10
+        .form-wrapper5
+          span.input-groop-title like button
+        .form-grid-row5
+          +like-button({
+            num: '2'
+          })
+          +like-button({
+            num: '12'
+          })
+
+    .form-wrapper150
+      .form-wrapper15
+        span.input-groop-title rate button
+      .form-grid-row
+        +rate(4)
+        +rate(5)
+
+    .form-wrapper100
+      label.form-label(for='three') dropdown
+      +dropdown({
+        mods: 'absolute, active',
+        defaultFieldTitle: 'Сколько гостей',
+        dropdownList: [
           {
-            title: 'Мужчина',
-            value: '1',
-            checked: true
+            name: 'adult',
+            default: '2',
+            title: 'Взрослые',
+            wordforms: 'Гость Гостя Гостей'
           },
           {
-            title: 'Женщина',
-            value: '2'
+            name: 'child',
+            default: '2',
+            title: 'Дети',
+            wordforms: 'Гость Гостя Гостей'
+
+          },
+          {
+            name: 'babes',
+            default: '2',
+            title: 'Младенцы',
+            wordforms: 'Гость Гостя Гостей'
           }
         ]
       })
-    .form-grid-column-10
-      .form-wrapper5
-        span.input-groop-title toggle
-      +toggle('Получать спецпредложения')
-      +toggle('Получать спецпредложения')
-    .form-grid-column-10
-      .form-wrapper5
-        span.input-groop-title like button
-      .form-grid-row5
-        +like-button({
-          num: '2'
-        })
-        +like-button({
-          num: '12'
-        })
-    .form-grid-column-10
-      .form-wrapper5
-        span.input-groop-title rate button
-      .form-grid-row
-        include ../../blocks/rate/rate
-        include ../../blocks/rate/rate
-
-  .form-elements-comment-container
-    +comment({
-      image: 'cadr.png',
-      tophead: 'Мурад Сарафанов',
-      bottomtext: '5 дней назад',
-      text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-      num: '12'
-    })
 
 
   .form-elements-button-container
-    .range-slider-wrapper
-      .form-wrapper20
+    .form-wrapper40
+      .short-width-wrapper
         .form-flex-row
           label.form-label(for='nine') Range Slider
           .extra-controls
@@ -142,23 +218,72 @@ block content
             input.js-input-to(type='text' value='0')
         include ../../blocks/range-slider/range-slider
 
-    .grid-tabel
-      +btn('click me', 'theme-main')(href="/mocke me")
-      +btn('click me', 'theme-main')(href="/mocke me")
-      .rounded-corners-gradient-borders
-        +btn('click me', 'theme-secondary')(href="/mocke me")
-      .rounded-corners-gradient-borders
-        +btn('click me', 'theme-secondary')(href="/mocke me")
-      +btn('click me', 'theme-text')(href="/mocke me")
-      +btn('click me', 'theme-text')(href="/mocke me")
+    .form-wrapper30
+      .form-wrapper20
+        span.input-groop-title buttons
+      .grid-tabel
+        +btn('click me', 'theme-main')(href="/mocke me")
+        +btn('click me', 'theme-main')(href="/mocke me")
+        .rounded-corners-gradient-borders
+          +btn('click me', 'theme-secondary')(href="/mocke me")
+        .rounded-corners-gradient-borders
+          +btn('click me', 'theme-secondary')(href="/mocke me")
+        +btn('click me', 'theme-text')(href="/mocke me")
+        +btn('click me', 'theme-text')(href="/mocke me")
     .form-wrapper40
       +btn('перейти к оплате', 'theme-main', true)
-    .form-grid-column-10
-      .form-wrapper5
-        span.input-groop-title pagination
+
+    .form-wrapper200
+      .form-grid-column-10
+        .form-wrapper5
+          span.input-groop-title pagination
         include ../../blocks/pagination/pagination
 
+    .form-wrapper20
+      .form-flex-row
+      label.form-label(for='three') dropdown
+      +dropdown({
+        mods: 'absolute, active',
+        defaultFieldTitle: 'Сколько гостей',
+        dropdownList: [
+          {
+            name: 'adult',
+            default: '2',
+            title: 'Взрослые',
+            wordforms: 'Гость Гостя Гостей'
+          },
+          {
+            name: 'child',
+            default: '2',
+            title: 'Дети',
+            wordforms: 'Гость Гостя Гостей'
+
+          },
+          {
+            name: 'babes',
+            default: '2',
+            title: 'Младенцы',
+            wordforms: 'Гость Гостя Гостей'
+          }
+        ]
+      })
 
 
 
 
+
+
+
+  //
+  //
+  //
+  //.form-elements-comment-container
+  //  +comment({
+  //    image: 'cadr.png',
+  //    tophead: 'Мурад Сарафанов',
+  //    bottomtext: '5 дней назад',
+  //    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+  //    num: '12'
+  //  })
+  //
+  //

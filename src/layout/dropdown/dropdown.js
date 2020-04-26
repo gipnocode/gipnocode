@@ -1,149 +1,137 @@
-/* eslint-disable func-names */
-(function ($) {
-  const defaults = {
-    maxItems: Infinity,
-    minItems: 0,
-
-    // selectionText: "гость",
-    // textPlural: "гостей",
-
-    controls: {
-      position: "right",
-      displayCls: "iqdropdown-content",
-      controlsCls: "iqdropdown-item-controls",
-      counterCls: "counter",
-    },
-
-    items: {},
-    onChange: () => {},
-
-    beforeDecrement: () => true,
-    beforeIncrement: () => true,
-    setSelectionText(itemCount, totalItems) {
-      const usePlural = totalItems < 1 && this.textPlural.length > 0;
-      const text = usePlural ? this.textPlural : this.selectionText;
-      if (totalItems < 1) {
-        return "Сколько гостей";
-      } else {
-        return `${totalItems} ${text}`;
-      }
-    },
-  };
-
-  $.fn.iqDropdown = function (options) {
-    this.each(function () {
-      const $this = $(this);
-      const $selection = $this.find("p.iqdropdown-selection").last();
-      const $menu = $this.find("div.iqdropdown-menu");
-      const $items = $menu.find("div.iqdropdown-menu-option");
-      const dataAttrOptions = {
-        selectionText: $selection.data("selection-text"),
-        textPlural: $selection.data("text-plural"),
-      };
-      const settings = $.extend(true, {}, defaults, dataAttrOptions, options);
-      const itemCount = {};
-      let totalItems = 0;
-
-      function updateDisplay() {
-        $selection.html(settings.setSelectionText(itemCount, totalItems));
-      }
-
-      function setItemSettings(id, $item) {
-        const minCount = Number($item.data("mincount"));
-        const maxCount = Number($item.data("maxcount"));
-
-        settings.items[id] = {
-          minCount: Number.isNaN(Number(minCount)) ? 0 : minCount,
-          maxCount: Number.isNaN(Number(maxCount)) ? Infinity : maxCount,
-        };
-      }
-
-      function addControls(id, $item) {
-        const $controls = $("<div />").addClass(settings.controls.controlsCls);
-        const $decrementButton = $(`
-          <button class="button-decrement">
-            <i class="icon-decrement"></i>
-          </button>
-        `);
-        const $incrementButton = $(`
-          <button class="button-increment">
-            <i class="icon-decrement icon-increment"></i>
-          </button>
-        `);
-        const $counter = $(`<span>${itemCount[id]}</span>`).addClass(
-          settings.controls.counterCls
-        );
-
-        $item.children("div").addClass(settings.controls.displayCls);
-        $controls.append($decrementButton, $counter, $incrementButton);
-
-        if (settings.controls.position === "right") {
-          $item.append($controls);
-        } else {
-          $item.prepend($controls);
+//Словоформы честно взяты отсюда https://realadmin.ru/coding/sklonenie-na-javascript.html
+function num2str(n, text_forms) {
+  n = Math.abs(n) % 100;
+  var n1 = n % 10;
+  if (n > 10 && n < 20) {
+    return text_forms[2];
+  }
+  if (n1 > 1 && n1 < 5) {
+    return text_forms[1];
+  }
+  if (n1 == 1) {
+    return text_forms[0];
+  }
+  return text_forms[2];
+}
+//Обновлялка текса в шапке dropDown
+function updateDropdowns() {
+  let dropdowns = document.querySelectorAll(".dropdown");
+  dropdowns.forEach((dropdown) => {
+    //Если сложная шапка для dropdown в названии выводим значения из нескольких итемов
+    if (dropdown.hasAttribute("several-word-forms")) {
+      let result = "";
+      let sum = 0;
+      let defaultValue = dropdown.getAttribute("default");
+      dropdown.querySelectorAll(".dropdown-list__item").forEach((item) => {
+        // Получаем все Элементы dropdown cо словоформами
+        if (item.hasAttribute("wordForms")) {
+          //Получаем Value
+          let elValue = item.querySelectorAll(".value");
+          let value;
+          elValue.forEach((valueItem) => {
+            value = Number.parseInt(valueItem.innerText);
+            sum += Number.parseInt(valueItem.innerText);
+          });
+          //Получаем словоформу
+          if (value > 0) {
+            let wordForms = item.getAttribute("wordForms").split(" ");
+            let rightForm = num2str(value, wordForms);
+            result += " " + value + " " + rightForm;
+          }
         }
-
-        $decrementButton.click((event) => {
-          const { items, minItems, beforeDecrement, onChange } = settings;
-          const allowClick = beforeDecrement(id, itemCount);
-
-          if (
-            allowClick &&
-            totalItems > minItems &&
-            itemCount[id] > items[id].minCount
-          ) {
-            itemCount[id] -= 1;
-            totalItems -= 1;
-            $counter.html(itemCount[id]);
-            updateDisplay();
-            onChange(id, itemCount[id], totalItems);
-          }
-
-          event.preventDefault();
-        });
-
-        $incrementButton.click((event) => {
-          const { items, maxItems, beforeIncrement, onChange } = settings;
-          const allowClick = beforeIncrement(id, itemCount);
-
-          if (
-            allowClick &&
-            totalItems < maxItems &&
-            itemCount[id] < items[id].maxCount
-          ) {
-            itemCount[id] += 1;
-            totalItems += 1;
-            $counter.html(itemCount[id]);
-            updateDisplay();
-            onChange(id, itemCount[id], totalItems);
-          }
-
-          event.preventDefault();
-        });
-
-        $item.click((event) => event.stopPropagation());
-
-        return $item;
+        //Пишем в заголовок дропдауна результат
+        if (sum !== 0) {
+          dropdown.querySelector(".dropdown__name").innerText = result + "...";
+        } else {
+          dropdown.querySelector(".dropdown__name").innerText = defaultValue;
+        }
+      });
+    }
+    //Простая форма dropdown - Типа сколько гостей
+    else {
+      //Получаем сумму всех у dropdown записываем в value
+      let valuesElements = dropdown.querySelectorAll(".value");
+      let value = 0;
+      valuesElements.forEach((valueItem) => {
+        value += Number.parseInt(valueItem.innerText);
+      });
+      //Получаем словоформы и записываем в массив
+      let wordForms = dropdown.hasAttribute("wordforms")
+        ? dropdown.getAttribute("wordforms").split(" ")
+        : undefined;
+      let rightForm = wordForms !== undefined ? num2str(value, wordForms) : "";
+      //Записываем в название dropdow значение всех
+      if (value !== 0) {
+        dropdown.querySelector(".dropdown__name").innerText =
+          value + " " + rightForm;
+      } else {
+        dropdown.querySelector(
+          ".dropdown__name"
+        ).innerText = dropdown.hasAttribute("default")
+          ? dropdown.getAttribute("default")
+          : (dropdown.querySelector(".dropdown__name").innerText =
+              value + " " + rightForm);
       }
+    }
+  });
+}
 
-      $this.click(() => {
-        $this.toggleClass("menu-open");
-      });
-
-      $items.each(function () {
-        const $item = $(this);
-        const id = $item.data("id");
-        const defaultCount = Number($item.data("defaultcount") || "0");
-
-        itemCount[id] = defaultCount;
-        totalItems += defaultCount;
-        setItemSettings(id, $item);
-        addControls(id, $item);
-      });
-
-      updateDisplay();
+//Функция создания контролов управления
+function createControls(defaultValue) {
+  let element = document.createElement("div");
+  let minus = document.createElement("div");
+  let value = document.createElement("div");
+  let plus = document.createElement("div");
+  element.className = "controls";
+  value.className = "value";
+  //Добавляем класс disabled если значение меньше чем 1
+  defaultValue < 1 ? minus.classList.add("disabled") : null;
+  value.innerText = defaultValue;
+  plus.innerText = "+";
+  plus.addEventListener("click", function () {
+    //Удаляем класс disabled у минуса если значение равно нулю
+    //если там было минус значение не удаляем:)
+    if (Number.parseInt(value.innerText) === 0) {
+      minus.classList.remove("disabled");
+    }
+    value.innerText = Number.parseInt(value.innerText) + 1;
+    updateDropdowns();
+  });
+  minus.innerText = "-";
+  minus.addEventListener("click", function () {
+    //Добавляем класс disabled если значение равно 1
+    if (parseInt(value.innerText) === 1) {
+      minus.classList.add("disabled");
+    }
+    //Блокируем минус если значение ноль и меньше
+    if (parseInt(value.innerText) > 0) {
+      value.innerText = Number.parseInt(value.innerText) - 1;
+    }
+    updateDropdowns();
+  });
+  element.append(minus);
+  element.append(value);
+  element.append(plus);
+  return element;
+}
+document.addEventListener("DOMContentLoaded", function () {
+  //Получаем все дропдауны
+  let drop = document.querySelectorAll(".dropdown");
+  drop.forEach((item, i) => {
+    //Каждому дропдауну навешиваем событие открытия
+    let dropdownName = item.querySelector(".dropdown__name");
+    dropdownName.addEventListener("click", function () {
+      event.target.closest(".dropdown").classList.toggle("active");
     });
-
-    return this;
-  };
-})(jQuery);
+    //Получаем все итемы у текущего дропдауна
+    let listItems = item.querySelectorAll(".dropdown-list__item");
+    listItems.forEach((item) => {
+      item.append(
+        createControls(
+          item.hasAttribute("default") ? item.getAttribute("default") : 0
+        )
+      );
+    });
+    updateDropdowns();
+  });
+});

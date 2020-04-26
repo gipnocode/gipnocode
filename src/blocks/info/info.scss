@@ -79,6 +79,20 @@
   grid-template-columns: 48px 220.45px;
   justify-content: space-between;
 }
+
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  display: inline-block;
+  line-height: 1rem;
+  text-transform: none;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .icon-info-left {
 }
 .commet-info-img {

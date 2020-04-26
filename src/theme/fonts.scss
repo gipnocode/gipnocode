@@ -64,14 +64,6 @@
     url("/assets/icons/MaterialIcons-Regular.svg") format("svg");
 }
 
-@font-face {
-  font-family: "Font Awsome";
-  src: url("/assets/fonts/fa-brands-400.eot");
-  src: url("/assets/fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/fa-brands-400.woff") format("woff"),
-    url("/assets/fonts/fa-brands-400.ttf") format("truetype"),
-    url("/assets/fonts/fa-brands-400.svg") format("svg");
-}
 h1 {
   font-family: OpenSans-Bold;
   font-size: 24px;
@@ -104,10 +96,12 @@ fieldset {
   border: rgba(0, 0, 0, 0);
   height: 100%;
   width: 100%;
+  border: none;
   //margin: 0 auto;
 }
 
 .state-description {
+  font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
   opacity: var(--opasity-05);
@@ -161,18 +155,40 @@ label:focus {
 .form-wrapper10 {
   margin-bottom: 10px;
 }
+.form-wrapper15 {
+  margin-bottom: 15px;
+}
 .form-wrapper20 {
   margin-bottom: 20px;
+}
+.form-wrapper25 {
+  margin-bottom: 25px;
 }
 .form-wrapper30 {
   margin-bottom: 30px;
 }
+.form-wrapper35 {
+  margin-bottom: 35px;
+}
 .form-wrapper40 {
   margin-bottom: 40px;
+}
+.form-wrapper100 {
+  margin-bottom: 100px;
+}
+.form-wrapper150 {
+  margin-bottom: 165px;
+}
+.form-wrapper200 {
+  margin-bottom: 240px;
 }
 .form-flex-row {
   display: flex;
   justify-content: space-between;
+}
+.form-flex-column {
+  display: flex;
+  flex-direction: column;
 }
 .form-grid-column20 {
   display: grid;
@@ -199,6 +215,7 @@ label:focus {
   justify-content: start;
   grid-row-gap: 33px;
 }
+
 //.form-wrapper10 {
 //  width: 100%;
 //  margin-bottom: 20px;

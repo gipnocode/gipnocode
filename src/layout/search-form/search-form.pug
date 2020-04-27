@@ -1,29 +1,30 @@
 include ../../blocks/input/input
 include ../../blocks/button/button
 
-form.form(action="#", method="post")
-  h1 Найдём номера под ваши пожелания
-  div.dinamic-calendar
-    div.search-form-input-wrapper
-      label(class="form-label" for="#calendar1") Прибытие
-      +input-field({
-        type: 'text',
-        placeholder: 'дд.мм.гггг',
-        mods: 'calendar-one',
-        id: "calendar1"
-      })
-    div.search-form-input-wrapper
-      label(class="form-label" for="#calendar2") Выезд
-      +input-field({
-        type: 'text',
-        placeholder: 'дд.мм.гггг',
-        mods: 'calendar-two',
-        id: "calendar2"
-      })
+mixin search-form()
+  form.form(action="#", method="post")
+    h1 Найдём номера под ваши пожелания
+    div.dinamic-calendar
+      div.search-form-input-wrapper
+        label(class="form-label" for="#calendar1") Прибытие
+        +input-field({
+          type: 'text',
+          placeholder: 'дд.мм.гггг',
+          mods: 'calendar-one',
+          id: "calendar1"
+        })
+      div.search-form-input-wrapper
+        label(class="form-label" for="#calendar2") Выезд
+        +input-field({
+          type: 'text',
+          placeholder: 'дд.мм.гггг',
+          mods: 'calendar-two',
+          id: "calendar2"
+        })
 
-  div.search-form-dropdown-wrapper
-    label(class="form-label" for="#drop") Гости
-    include ../dropdown/dropdown
-    div.search-form-button-wrapper
-      +btn('подобрать номер', 'theme-main')(href="/mocke me")
+    div.search-form-dropdown-wrapper
+      label(class="form-label" for="#drop") Гости
+      include ../dropdown/dropdown
+      div.search-form-button-wrapper
+        +btn('подобрать номер', 'theme-main')(href="/mocke me")
 

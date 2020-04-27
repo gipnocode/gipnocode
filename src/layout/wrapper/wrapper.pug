@@ -1,4 +1,14 @@
-mixin wrapper(options)
-  .wrapper(class!=attributes.class)
-    block
 
+
+mixin wrapper(options)
+  if !options
+    - options = {}
+
+  -
+    var classes = ''
+    classes += options.marginBottom ? ' marginBottom-' + options.marginBottom : ''
+    classes += options.flexDirection ? ' flexDirrection-' + options.flexDirection : ''
+
+    classes += options.mix ? ' ' + options.mix : ''
+  .wrapper(class= classes)
+    block

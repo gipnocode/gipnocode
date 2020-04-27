@@ -1,11 +1,38 @@
-.wrapper {
-  //position: relative;
-  //top: 20px;
-  //left: 40px;
-  //display: flex;
-  //height: 369px;
+.marginBottom-5 {
+  margin-bottom: 1px;
 }
-//.search-form-wrapper {
-//  height: 374px;
-//  margin-left: 500px;
-//}
+.marginBottom-10 {
+  margin-bottom: 10px;
+}
+.marginBottom-15 {
+  margin-bottom: 15px;
+}
+.marginBottom-20 {
+  margin-bottom: 20px;
+}
+.marginBottom-25 {
+  margin-bottom: 25px;
+}
+.marginBottom-30 {
+  margin-bottom: 30px;
+}
+.marginBottom-35 {
+  margin-bottom: 35px;
+}
+.marginBottom-40 {
+  margin-bottom: 40px;
+}
+.marginBottom-45 {
+  margin-bottom: 45px;
+}
+.marginBottom-50 {
+  margin-bottom: 50px;
+}
+.flexDirrection-row {
+  display: flex;
+  justify-content: space-between;
+}
+.flexDirrection-column {
+  display: flex;
+  flex-direction: column;
+}

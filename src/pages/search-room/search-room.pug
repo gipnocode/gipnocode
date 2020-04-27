@@ -10,13 +10,13 @@ include ../../blocks/info/info
 include ../../layout/comment/comment
 include ../../blocks/button/button
 include ../../blocks/rate/rate
-include ../../layout/dropdown/mix
+include ../../layout/dropdown/dropdown
 block variables
-  - let pageClass = 'galery-page';
-  - let containerName = 'galery-container'
+  - let pageClass = 'search-room-page';
+  - let containerName = 'search-room-container'
 block content
   main.cont
-    //h2 Номера, которые мы для вас подобрали
+    //h1 Номера, которые мы для вас подобрали
     section.filter
       .form-wrapper20
         div.dinamic-calendar
@@ -115,7 +115,7 @@ block content
 
 
 
-    section.card-galery
+    section.card-search-room
       +card({
         image1: 'room-350-1.jpg',
         image2: 'room-350-2.jpg',
@@ -125,8 +125,8 @@ block content
         price: '9 990₽',
         tophead: ' в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star1',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '5'
       })
       +card({
         image1: 'room-352-1.jpg',
@@ -136,9 +136,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star2',
-        linkToRoom: 'room-details.html'
-
+        linkToRoom: 'room-details.html',
+        rate: '4'
       })
       +card({
         image1: 'room-444-1.jpg',
@@ -148,8 +147,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star3',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '3'
 
       })
       +card({
@@ -160,8 +159,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star4',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '5'
 
       })
       +card({
@@ -172,8 +171,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star5',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '4'
       })
       +card({
         image1: 'room-678-1.jpg',
@@ -183,8 +182,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star6',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '3'
 
       })
       +card({
@@ -195,8 +194,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star8',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '5'
 
       })
       +card({
@@ -207,8 +206,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star9',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '4'
 
       })
       +card({
@@ -219,8 +218,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star10',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '3'
 
       })
       +card({
@@ -231,8 +230,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star11',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '5'
 
       })
       +card({
@@ -243,8 +242,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star12',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '4'
 
       })
       +card({
@@ -255,8 +254,8 @@ block content
         righthead: '№ 888 люкс',
         tophead: '9 990₽ в сутки',
         bottomhead: '145 Отзывов',
-        starName: 'cards-star13',
-        linkToRoom: 'room-details.html'
+        linkToRoom: 'room-details.html',
+        rate: '3'
       })
 
 

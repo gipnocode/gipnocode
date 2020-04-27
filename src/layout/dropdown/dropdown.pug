@@ -1,27 +1,27 @@
-include ../../blocks/input/input
-.dropdown.absolute(wordforms='Гость Гостя Гостей' default='Сколько гостей?')
- .dropdown__name Сколько гостей?
- .dropdown-list
-  .dropdown-list__item(name='adult' default='2') Взрослые
-  .dropdown-list__item(name='child' default='1') Дети
-  .dropdown-list__item(name='babes') Младенцы
-//.dropdown.absolute(several-word-forms='' default='Сколько спален и кроватей?')
-// .dropdown__name  Сколько спален и кроватей?
-// .dropdown-list
-//  .dropdown-list__item(wordforms='Спальня Спальни Спален' name='rooms' default='2') Спальни
-//  .dropdown-list__item(wordforms='Кровать Кровати Кроватей' name='beds' default='2')Кровати
-//  .dropdown-list__item(name='bath') Ванные комнаты
-//.dropdown.active
-// #drop.dropdown__name Dropdown
-// .dropdown-list
-//  .dropdown-list__item item 1
-//  .dropdown-list__item item 2
-//  .dropdown-list__item item 3
-//  .dropdown-list__item item 4
-//.dropdown
-// #drop.dropdown__name Dropdown
-// .dropdown-list
-//  .dropdown-list__item item 1
-//  .dropdown-list__item item 2
-//  .dropdown-list__item item 3
-//  .dropdown-list__item item 4
+mixin dropdown(props={})
+ -
+
+  const {mods, moduleClass, dropdownList, wordforms, dat, defaultFieldTitle} = props
+  let allMods = ''
+  if (typeof(mods) !== 'undefined' && mods) {
+   let modList = mods.split(',')
+   for (let i=0; i < modList.length; i++) {
+    allMods = allMods + ' dropdown_' + modList[i].trim()
+   }
+  }
+
+ .dropdown(several-word-forms)(
+  class = moduleClass + allMods,
+  default= defaultFieldTitle
+ )
+  .dropdown__name
+  .dropdown-list
+   each dropdownItem, index in dropdownList
+    - const {title, name, defaultValue, wordforms} = dropdownItem
+    .dropdown-list__item(
+     name = name,
+     default = defaultValue,
+     wordforms= wordforms,
+    )= title
+
+

@@ -1,16 +1,18 @@
 extends ../../layout/main/plain-main
-include ../../blocks/input/input
-include ../../layout/wrapper/wrapper
+include ../../layout/search-form/search-form
+include ../../layout/ booking-form/booking-form
+include ../../layout/registration-form/registration-form
+include ../../layout/singin/singin
 block variables
  - let pageClass = 'cards';
 block content
  div.cards-page-search-form-w
-  include ../../layout/search-form/search-form
+  +search-form()
  div.cards-page-booking-form-w
-  include ../../layout/ booking-form/booking-form
+  +booking-form()
  div.cards-page-static-calendar-w
   span.mytest
  div.cards-page-registration-form-w
-  include ../../layout/registration-form/registration-form
+  +registration-form()
  div.cards-page-singin-form-w
-  include ../../layout/singin/singin
+  +singin()

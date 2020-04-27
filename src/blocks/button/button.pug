@@ -1,20 +1,3 @@
-mixin button(props={})
-  -
-    const {moduleClass, mods, lineTitle} = props
-    let allMods = ''
-    if (typeof(mods) !== 'undefined' && mods) {
-      let modList = mods.split(',')
-      for (let i=0; i < modList.length; i++) {
-        allMods = allMods + ' button_' + modList[i].trim()
-      }
-    }
-
-  button.button(
-    class= (moduleClass || '') + allMods,
-    type="button"
-  )= lineTitle
-
-
 mixin btn(text, mods, isInput, required)
 
   //- Принимает:

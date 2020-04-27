@@ -1,15 +1,16 @@
 .cont {
   display: grid;
-  grid-template-columns: 266px 900px;
+  grid-template-columns: 266px 834px;
   width: 1160px;
   margin: 0 auto;
+  justify-content: space-between;
 }
 .filter {
   display: flex;
   flex-direction: column;
   width: 266px;
 }
-.card-galery {
+.card-search-room {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1em;

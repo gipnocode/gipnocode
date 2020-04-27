@@ -2,19 +2,21 @@ include ../../blocks/input/input
 include ../../blocks/radio/radio
 include ../../blocks/toggle/toggle
 include ../../blocks/button/button
-form.form(method='post' name='singhup' id='singhup')
-  .form-wrapper20
-    h1  Войти
-  .form-wrapper10
-    +input-field({placeholder: 'Email', type: 'email'})
-  .form-wrapper20
-    +input-field({placeholder: 'Пароль', type: 'password'})
-  .form-wrapper30
-    +btn('войти',  'theme-main',  true)
-  .form-button-wrapper
-    span Нет аккаунта на Toxin?
-    .rounded-corners-gradient-borders
-      +btn('создать',  'theme-secondary')(href="/mock me")
+
+mixin singin()
+  form.form(method='post' name='singhup' id='singhup')
+    .form-wrapper20
+      h1  Войти
+    .form-wrapper10
+      +input-field({placeholder: 'Email', type: 'email'})
+    .form-wrapper20
+      +input-field({placeholder: 'Пароль', type: 'password'})
+    .form-wrapper30
+      +btn('войти',  'theme-main',  true)
+    .form-button-wrapper
+      span Нет аккаунта на Toxin?
+      .rounded-corners-gradient-borders
+        +btn('создать',  'theme-secondary')(href="/mock me")
 
 
 

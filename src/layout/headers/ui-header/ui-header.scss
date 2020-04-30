@@ -46,7 +46,7 @@
     //font-size: 0.875rem;
     font-size: 13.9px;
     line-height: 17px;
-    font-family: var(--first-font);
+    font-family: var(Montserrat-Regular);
     //font-weight: bold;
   }
 }
@@ -58,7 +58,7 @@
 
 .ui-header-nav-link.first {
   color: rgba(var(--default-color), var(--opasity-075));
-  font-family: var(--second-font);
+  font-family: var(--Montserrat-Bold);
   //font-weight: bold;
 }
 

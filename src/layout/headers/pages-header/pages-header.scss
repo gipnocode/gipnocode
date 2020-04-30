@@ -5,7 +5,7 @@ $nav-scrollbar-height: 1em;
 .pages-header-nav-link {
   color: rgba(var(--default-color), var(--opasity-05));
   font-size: var(--text-sm);
-  font-family: var(--first-font);
+  font-family: var(Montserrat-Regular);
 }
 
 .pages-header-wrapper {
@@ -89,7 +89,7 @@ $nav-scrollbar-height: 1em;
     width: 12.5rem;
     font-weight: bold;
     font-size: var(--text-sm);
-    font-family: var(--first-font);
+    font-family: var(Montserrat-Regular);
     color: var(--purple);
   }
   @media (min-width: 360px) {
@@ -157,6 +157,7 @@ $nav-scrollbar-height: 1em;
   .pages-header-button {
     display: grid;
     grid-template-columns: 1.3fr 3fr;
+    grid-template-rows: 34px;
     grid-column-gap: 20px;
     align-items: center;
     width: 39.5%;

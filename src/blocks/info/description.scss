@@ -1,0 +1,10 @@
+.description {
+  display: grid;
+  width: 150px;
+  grid-template-columns: 1fr 1fr;
+  &_colored-background {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+  }
+}

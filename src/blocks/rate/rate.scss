@@ -3,12 +3,12 @@
   user-select: none;
 
   &__icon {
-    font-family: "Material Icons";
+    font-family: var(--Material-Icons);
     font-weight: normal;
     font-style: normal;
     font-size: 1.5rem;
-    display: inline-block;
-    line-height: 1rem;
+    //display: inline-block;
+    //line-height: 1rem;
     text-transform: none;
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     -webkit-background-clip: text;

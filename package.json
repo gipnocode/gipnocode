@@ -7,8 +7,7 @@
     "dev": "webpack-dev-server --open  --config ./build/webpack.dev.conf.js",
     "build": "webpack --config ./build/webpack.build.conf.js",
     "deploy": "gh-pages -d dist",
-    "style": "npx stylelint \"**/*.scss\"",
-    "clean-source": "rimraf README.md src webroot package.json"
+    "style": "npx stylelint \"**/*.scss\""
   },
   "browserslist": [
     "> 1%",
@@ -19,7 +18,6 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
-    "@fortawesome/fontawesome-free": "^5.13.0",
     "autoprefixer": "^9.7.6",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -28,7 +26,6 @@
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
     "file-loader": "^6.0.0",
-    "gh-pages": "^2.2.0",
     "html-webpack-plugin": "^4.2.0",
     "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
@@ -54,12 +51,12 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "funding": "^1.0.9",
     "item-quantity-dropdown": "^2.1.0",
     "jquery": "^3.5.0",
     "material-icons": "^0.3.1",
     "moment": "^2.24.0",
     "npm": "^6.14.4",
+    "postcss-custom-properties": "^9.1.1",
     "stylelint-config-sass-guidelines": "^7.0.0"
   }
 }

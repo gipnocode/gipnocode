@@ -1,222 +1,149 @@
+/* montserrat-regular - latin_cyrillic */
 @font-face {
   font-family: "Montserrat-Regular";
-  font-weight: 400;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Regular.eot");
-  src: url("/assets/fonts/Montserrat-Regular.eot?#iefix")
+  font-weight: 400;
+  src: url("assets/fonts/montserrat-v14-latin_cyrillic-regular.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("assets/fonts/montserrat-v14-latin_cyrillic-regular.eot?#iefix")
       format("embedded-opentype"),
-    url("/assets/fonts/Montserrat-Regular.woff") format("woff"),
-    url("/assets/fonts/Montserrat-Regular.ttf") format("truetype"),
-    url("/assets/fonts/Montserrat-Regular.svg") format("svg");
+    /* IE6-IE8 */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-regular.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
 }
-
+/* montserrat-700 - latin_cyrillic */
 @font-face {
   font-family: "Montserrat-Bold";
-  font-weight: 700;
   font-style: normal;
-  src: url("/assets/fonts/Montserrat-Bold.eot");
-  src: url("/assets/fonts/Montserrat-Bold.eot?#iefix")
+  font-weight: 700;
+  src: url("assets/fonts/montserrat-v14-latin_cyrillic-700.eot"); /* IE9 Compat Modes */
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("assets/fonts/montserrat-v14-latin_cyrillic-700.eot?#iefix")
       format("embedded-opentype"),
-    url("/assets/fonts/Montserrat-Bold.woff") format("woff"),
-    url("/assets/fonts/Montserrat-Bold.ttf") format("truetype"),
-    url("/assets/fonts/Montserrat-Bold.svg") format("svg");
+    /* IE6-IE8 */ url("assets/fonts/montserrat-v14-latin_cyrillic-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-700.woff") format("woff"),
+    /* Modern Browsers */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("assets/fonts/montserrat-v14-latin_cyrillic-700.svg#Montserrat")
+      format("svg"); /* Legacy iOS */
 }
+/* quicksand-700 - latin */
 @font-face {
   font-family: "Quicksand-Bold";
+  font-style: normal;
   font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/Quicksand-Bold.eot");
-  src: url("/assets/fonts/Quicksand-Bold.eot?#iefix")
-      format("/embedded-opentype"),
-    url("/assets/fonts/Quicksand-Bold.woff") format("woff"),
-    url("/assets/fonts/Quicksand-Bold.ttf") format("truetype"),
-    url("/assets/fonts/Quicksand-Bold.svg") format("svg");
+  src: url("assets/fonts/quicksand-v20-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("assets/fonts/quicksand-v20-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("assets/fonts/quicksand-v20-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("assets/fonts/quicksand-v20-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("assets/fonts/quicksand-v20-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("assets/fonts/quicksand-v20-latin-700.svg#Quicksand") format("svg"); /* Legacy iOS */
 }
-@font-face {
-  font-family: "OpenSans-Regular";
-  font-weight: 400;
-  font-style: normal;
-  src: url("/assets/fonts/OpenSans-Regular.eot");
-  src: url("/assets/fonts/OpenSans-Regular.eot?#iefix")
-      format("/embedded-opentype"),
-    url("/assets/fonts/OpenSans-Regular.woff") format("woff"),
-    url("/assets/fonts/OpenSans-Regular.ttf") format("truetype"),
-    url("/assets/fonts/OpenSans-Regular.svg") format("svg");
-}
+
+/* open-sans-700 - cyrillic */
 @font-face {
   font-family: "OpenSans-Bold";
+  font-style: normal;
   font-weight: 700;
-  font-style: normal;
-  src: url("/assets/fonts/OpenSans-Bold.eot");
-  src: url("/assets/fonts/OpenSans-Bold.eot?#iefix")
-      format("/embedded-opentype"),
-    url("/assets/fonts/OpenSans-Bold.woff") format("woff"),
-    url("/assets/fonts/OpenSans-Bold.ttf") format("truetype"),
-    url("/assets/fonts/OpenSans-Bold.svg") format("svg");
-}
-@font-face {
-  font-family: "Material Icons";
-  src: url("/assets/icons/MaterialIcons-Regular.eot");
-  src: url("/assets/icons/MaterialIcons-Regular.eot?#iefix")
+  src: url("assets/fonts/open-sans-v17-cyrillic-700.eot"); /* IE9 Compat Modes */
+  src: local("Open Sans Bold"), local("OpenSans-Bold"),
+    url("assets/fonts/open-sans-v17-cyrillic-700.eot?#iefix")
       format("embedded-opentype"),
-    url("/assets/icons/MaterialIcons-Regular.woff") format("woff"),
-    url("/assets/icons/MaterialIcons-Regular.ttf") format("truetype"),
-    url("/assets/icons/MaterialIcons-Regular.svg") format("svg");
+    /* IE6-IE8 */ url("assets/fonts/open-sans-v17-cyrillic-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("assets/fonts/open-sans-v17-cyrillic-700.woff") format("woff"),
+    /* Modern Browsers */ url("assets/fonts/open-sans-v17-cyrillic-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("assets/fonts/open-sans-v17-cyrillic-700.svg#OpenSans") format("svg"); /* Legacy iOS */
 }
 
-h1 {
-  font-family: OpenSans-Bold;
-  font-size: 24px;
-  line-height: 30px;
-}
-.input-groop-title {
-  font-family: Montserrat-Bold;
-  //line-height: 15px;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.form-label {
-  display: block;
-  font-family: Montserrat-Bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  margin-bottom: 5px;
-  //color: #1f2041;
-}
-
-input[placeholder] {
-  font-size: 14px;
-  line-height: 18px;
-  padding: 0.9em;
-}
-
-fieldset {
-  border: rgba(0, 0, 0, 0);
-  height: 100%;
-  width: 100%;
-  border: none;
-  //margin: 0 auto;
-}
-
-.state-description {
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  opacity: var(--opasity-05);
-}
-section {
-  font-family: Montserrat-Regular;
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  src: url("assets/fonts/fontello.eot?95253147");
+  src: url("assets/fonts/fontello.eot?95253147#iefix")
+      format("embedded-opentype"),
+    url("assets/fonts/fontello.woff2?95253147") format("woff2"),
+    url("assets/fonts/fontello.woff?95253147") format("woff"),
+    url("assets/fonts/fontello.ttf?95253147") format("truetype"),
+    url("assets/fonts/fontello.svg?95253147#fontello") format("svg");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  //color: rgba(31, 32, 65, 0.75);
 }
-.toggle_lable {
-  font-family: Montserrat-Regular;
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?95253147#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: var(--Font-Awesome);
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-  //color: rgba(31, 32, 65, 0.5);
-}
-label:focus {
-  border-color: #1f2041;
-}
-.form-button-wrapper {
-  display: grid;
-  grid-template-columns: 4fr 1.81fr;
-  align-items: center;
-  font-family: Montserrat-Regular;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 18px;
+  speak: none;
 
-  //color: #000000;
-}
-.form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 380px;
-  padding: 25px 30px 25px 30px;
-}
-.form-wrapper5 {
-  margin-bottom: 5px;
-}
-.form-wrapper10 {
-  margin-bottom: 10px;
-}
-.form-wrapper15 {
-  margin-bottom: 15px;
-}
-.form-wrapper20 {
-  margin-bottom: 20px;
-}
-.form-wrapper25 {
-  margin-bottom: 25px;
-}
-.form-wrapper30 {
-  margin-bottom: 30px;
-}
-.form-wrapper35 {
-  margin-bottom: 35px;
-}
-.form-wrapper40 {
-  margin-bottom: 40px;
-}
-.form-wrapper100 {
-  margin-bottom: 100px;
-}
-.form-wrapper150 {
-  margin-bottom: 165px;
-}
-.form-wrapper200 {
-  margin-bottom: 240px;
-}
-.form-flex-row {
-  display: flex;
-  justify-content: space-between;
-}
-.form-flex-column {
-  display: flex;
-  flex-direction: column;
-}
-.form-grid-column20 {
-  display: grid;
-  grid-row-gap: 20px;
-}
-.form-grid-column-10 {
-  display: grid;
-  grid-row-gap: 10px;
-  align-items: center;
-}
-.form-grid-row5 {
-  display: grid;
-  grid-template-columns: 1fr 1fr 4.1fr;
-  grid-column-gap: 5px;
-}
-.form-grid-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.grid-tabel {
-  display: grid;
-  grid-template-columns: 99px 99px;
-  grid-column-gap: 20px;
-  justify-content: start;
-  grid-row-gap: 33px;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
-//.form-wrapper10 {
-//  width: 100%;
-//  margin-bottom: 20px;
-//}
+.icon-twitter:before {
+  content: "\f099";
+} /* '' */
+.icon-instagram:before {
+  content: "\f16d";
+} /* '' */
+
+.icon-facebook-squared:before {
+  content: "\f308";
+} /* '' */

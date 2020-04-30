@@ -5,6 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const postcss = require('postcss');
+const postcssCustomProperties = require('postcss-custom-properties');
 let PrettierPlugin = require("prettier-webpack-plugin");
 
 const PATHS = {
@@ -89,7 +91,17 @@ module.exports = {
           options: { sourceMap: true }
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+          options: {
+            ident: 'postcss',
+            plugins: () => [
+              postcssCustomProperties({
+                preserve: false
+              })
+            ],
+            sourceMap: true,
+            config: { path: `./postcss.config.js` } ,
+
+          }
         }
       ]
     }]
@@ -101,11 +113,12 @@ module.exports = {
     }
   },
   plugins: [
+
     new PrettierPlugin(),
     new MiniCssExtractPlugin({
       filename: `[name].[hash].css`,
     }),
-    new CleanWebpackPlugin(),
+    // new CleanWebpackPlugin(),
       ...PAGES.map((page) => new HtmlWebpackPlugin({
       filename: `${page}.html`,
       template: `${PAGES_DIR}/${page}/${page}.pug`,
@@ -128,6 +141,8 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-    }),
+    }
+    ),
+
   ],
 };

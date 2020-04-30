@@ -1,0 +1,19 @@
+mixin description(options, isImg)
+  -
+    var allMods = '';
+    if (typeof (options.mods) !== 'undefined' && options.mods) {
+      var modsList = options.mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' description_' + modsList[i].trim();
+      }
+    }
+
+  .description(class= allMods)&attributes(attributes)
+    if(typeof(isImg) !== 'undefined' && isImg)
+      div
+        img(src= options.url width="48px" height="48px" alt="apartment photo")
+    else
+      div= options.text
+    .accented= options.accentedText
+    .regular= options.regularText
+

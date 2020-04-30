@@ -8,7 +8,6 @@
     "build": "webpack --config ./build/webpack.build.conf.js",
     "deploy": "gh-pages -d dist",
     "style": "npx stylelint \"**/*.scss\""
-
   },
   "browserslist": [
     "> 1%",
@@ -57,6 +56,7 @@
     "material-icons": "^0.3.1",
     "moment": "^2.24.0",
     "npm": "^6.14.4",
+    "postcss-custom-properties": "^9.1.1",
     "stylelint-config-sass-guidelines": "^7.0.0"
   }
 }

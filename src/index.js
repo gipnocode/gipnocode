@@ -1,12 +1,7 @@
-import "./plugins/jquery-date-range-picker-master/src/jquery.daterangepicker";
 import "./plugins/jquery.maskedinput/jquery.maskedinput";
-import "item-quantity-dropdown/lib/item-quantity-dropdown.min";
 import "./plugins/slick-1.8.1/slick/slick";
 import "./plugins/slick-1.8.1/slick/slick.scss";
-import "./plugins/slick-1.8.1-shit/slick/slick-theme.scss";
-import "./plugins/ion.rangeSlider-master/js/ion.rangeSlider.min";
-import "@fortawesome/fontawesome-free/js/all.min";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import "./plugins/slick-1.8.1/slick/slick-theme.scss";
 
 function importAll(resolve) {
   resolve.keys().forEach(resolve);

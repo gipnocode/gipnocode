@@ -10,6 +10,7 @@ include ../../blocks/button/button
 include ../../blocks/rate/rate
 include ../../layout/dropdown/dropdown
 include ../../layout/wrapper/wrapper
+include ../../blocks/info/description
 block variables
   - let pageClass = 'form-elements';
 
@@ -268,23 +269,61 @@ block content
           }
         ]
       })
+  .form-elements-comment-container
+    +comment({
+      image: 'cadr.png',
+      tophead: 'Мурад Сарафанов',
+      bottomtext: '5 дней назад',
+      text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
+      num: '12'
+    })
+    +wrapper({marginBottom: '20'})
+      +description({
+        url:'assets/img/cadr.png',
+        accentedText: 'Мурад Сарафанов',
+        regularText: '5 дней назад'}, true)
+    +wrapper({marginBottom:40})
+      +description({
+        mods:'colored-background',
+        accentedText: 'Purple',
+        regularText: '#BC9CFF'
+      }, false)
+    .ch
+      +checkbox-test([
+        {
+          title: 'Завтрак',
+          attrs: {
+            name: 'breakfast',
+
+          }
+        },
+        {
+          title: 'Письменный стол',
+          attrs: {
+            name: 'breakfast',
+            checked: true,
+            disabled: false
+          }
+        },
+
+        {
+          title: 'Стул для кормления',
+          attrs: {
+            name: 'breakfast',
+            disabled: true
+          }
+        },
+        {
+          title: 'Кроватка',
+          attrs: {
+            name: 'breakfast',
+            checked: true,
+            disabled: true
+          }
+        },
+      ])
 
 
 
 
 
-
-
-  //
-  //
-  //
-  //.form-elements-comment-container
-  //  +comment({
-  //    image: 'cadr.png',
-  //    tophead: 'Мурад Сарафанов',
-  //    bottomtext: '5 дней назад',
-  //    text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.',
-  //    num: '12'
-  //  })
-  //
-  //

@@ -3,6 +3,8 @@ include ../../layout/search-form/search-form
 include ../../layout/ booking-form/booking-form
 include ../../layout/registration-form/registration-form
 include ../../layout/singin/singin
+include ../../layout/cards/cards
+include ../../layout/wrapper/wrapper
 block variables
  - let pageClass = 'cards';
 block content
@@ -16,3 +18,29 @@ block content
   +registration-form()
  div.cards-page-singin-form-w
   +singin()
+ div.cards-page-room-card-w
+  +wrapper({marginBottom:'40'})
+    +card({
+     image1: 'room-350-1.jpg',
+     image2: 'room-350-2.jpg',
+     image3: 'room-350-3.jpg',
+     image4: 'room-350-4.jpg',
+     room: '№ 840',
+     lux: true,
+     price: '9 990₽',
+     review: '65',
+     rate: '5'
+    })
+  +card({
+   image1: 'room-350-1.jpg',
+   image2: 'room-350-2.jpg',
+   image3: 'room-350-3.jpg',
+   image4: 'room-350-4.jpg',
+   room: '№ 888',
+   lux: false,
+   price: '9 990₽',
+   review: '145',
+   rate: '5'
+  })
+
+

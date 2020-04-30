@@ -1,3 +1,5 @@
+import "../../plugins/ion.rangeSlider-master/js/ion.rangeSlider.min";
+
 var $range = $(".js-range-slider"),
   $inputFrom = $(".js-input-from"),
   $inputTo = $(".js-input-to"),

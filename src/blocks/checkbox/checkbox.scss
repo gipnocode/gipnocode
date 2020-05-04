@@ -3,9 +3,6 @@
   margin-bottom: 10.56px;
 }
 .checkbox {
-  //display: inline-flex;
-  //flex-direction: row;
-  //align-items: center;
   padding-left: 1.2em;
 
   &__input {
@@ -29,20 +26,20 @@
   }
 
   &__input:checked + &__box {
-    background-image: url("assets/img/Vector.svg");
+    background-image: url("/assets/img/Vector.svg");
     background-repeat: no-repeat;
   }
   &__input:focus + &__box {
   }
   &__input:focus:checked + &__box {
-    background-image: url("assets/img/Vector.svg");
+    background-image: url("/assets/img/Vector.svg");
     background-repeat: no-repeat;
   }
   &__input:disabled + &__box {
     border-color: 1px solid var(--default-color);
   }
   &__input:disabled:checked + &__box {
-    background-image: url("assets/img/Vector.svg");
+    background-image: url("/assets/img/Vector.svg");
     background-repeat: no-repeat;
   }
 

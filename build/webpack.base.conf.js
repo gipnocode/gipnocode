@@ -45,7 +45,7 @@ module.exports = {
         loader: 'file-loader',
         options: {
           name: '[name].[ext]',
-          // outputPath: 'assets/img',
+
         },
       },
       {
@@ -74,7 +74,14 @@ module.exports = {
 
         }, {
           loader: 'postcss-loader',
-          options: { sourceMap: true,
+          options: {
+            ident: 'postcss',
+            plugins: () => [
+              postcssCustomProperties({
+                preserve: false
+              })
+            ],
+            sourceMap: true,
             config: { path: `./postcss.config.js` } }
         }, {
           loader: 'sass-loader',
@@ -95,7 +102,7 @@ module.exports = {
             ident: 'postcss',
             plugins: () => [
               postcssCustomProperties({
-                preserve: false
+                // preserve: false
               })
             ],
             sourceMap: true,
@@ -113,7 +120,6 @@ module.exports = {
     }
   },
   plugins: [
-
     new PrettierPlugin(),
     new MiniCssExtractPlugin({
       filename: `[name].[hash].css`,

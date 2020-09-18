@@ -1,7 +1,11 @@
 extends ../../layout/main/main
+include ../../layout/search-form/search-form
 block variables
   - let pageClass = 'landing-page';
   - let containerName = 'landing-container'
 block content
+  div.cards-page-booking-form-w
+    +search-form
+
 
 

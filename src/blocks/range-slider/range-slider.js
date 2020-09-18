@@ -1,6 +1,6 @@
 import "../../plugins/ion.rangeSlider-master/js/ion.rangeSlider.min";
 
-var $range = $(".js-range-slider"),
+let $range = $(".js-range-slider"),
   $inputFrom = $(".js-input-from"),
   $inputTo = $(".js-input-to"),
   instance,
@@ -32,7 +32,7 @@ function updateInputs(data) {
 }
 
 $inputFrom.on("input", function () {
-  var val = $(this).prop("value");
+  let val = $(this).prop("value");
 
   // validate
   if (val < min) {
@@ -47,7 +47,7 @@ $inputFrom.on("input", function () {
 });
 
 $inputTo.on("input", function () {
-  var val = $(this).prop("value");
+  let val = $(this).prop("value");
 
   // validate
   if (val < from) {

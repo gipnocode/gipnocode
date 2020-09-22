@@ -1,6 +1,6 @@
 include ../../blocks/input/input
 include ../../blocks/button/button
-
+include ../dropdown/dropdown
 mixin search-form()
   form.form(action="#", method="post")
     h1 Найдём номера под ваши пожелания
@@ -24,7 +24,10 @@ mixin search-form()
 
     div.search-form-dropdown-wrapper
       label(class="form-label" for="#drop") Гости
-      include ../dropdown/dropdown
+      +dropdown({
+        defaultFieldTitle: 'Сколько гостей',
+        dropdownList: [{}]
+      })
       div.search-form-button-wrapper
         +btn('подобрать номер', 'theme-main')(href="/mocke me")
 

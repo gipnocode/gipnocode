@@ -1,3 +1,4 @@
+include ../pages-footer/pages-footer
 block variables
 doctype html
 html(lang='ru')
@@ -12,6 +13,8 @@ html(lang='ru')
     h1.visiually-hidden Отель TOXIN
     include ../headers/pages-header/pages-header
     block content
+    .pages-footer-wrapper-on-main
+      +pages-footer
 
 
 

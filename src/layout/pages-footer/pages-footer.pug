@@ -1,66 +1,67 @@
 include ../../blocks/input/input
-div.pages-footer-wrapper
- footer.pages-footer
-  div.footer-logo
-    a.pages-footer-logo(href="landing.html")
-     include ../../blocks/logo/logo
-    p.footer-logotext.
-        Бронирование номеров в лучшем
-        отеле 2019 года по версии
-        ассоциации "Отельные взгляды"
-  div.pages-footer-nav
-   div.col1
-    ul.pages-footer-nav-list
-     li.pages-footer-nav-item
-      a.ui-footer-nav-link-first(href="/mock address/") навигация
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") о нас
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") новости
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") служба поддержки
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") услуги
-     li.pages-footer-nav-item
+mixin pages-footer()
+ div.pages-footer-wrapper
+  footer.pages-footer
+   div.footer-logo
+     a.pages-footer-logo(href="landing.html")
+      include ../../blocks/logo/logo
+     p.footer-logotext.
+         Бронирование номеров в лучшем
+         отеле 2019 года по версии
+         ассоциации "Отельные взгляды"
+   div.pages-footer-nav
+    div.col1
+     ul.pages-footer-nav-list
+      li.pages-footer-nav-item
+       a.ui-footer-nav-link-first(href="/mock address/") навигация
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") о нас
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") новости
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") служба поддержки
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") услуги
+      li.pages-footer-nav-item
 
 
-    ul.pages-footer-nav-list
-     li.pages-footer-nav-item
-      a.ui-footer-nav-link-first(href="/mock address/") о нас
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") о сервисе
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") наша команда
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") вакансии
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") инвесторы
+     ul.pages-footer-nav-list
+      li.pages-footer-nav-item
+       a.ui-footer-nav-link-first(href="/mock address/") о нас
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") о сервисе
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") наша команда
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") вакансии
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") инвесторы
 
 
-    ul.pages-footer-nav-list
-     li.pages-footer-nav-item
-      a.ui-footer-nav-link-first(href="/mock address/") служба поддержки
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") соглашения
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") сообщения
-     li.pages-footer-nav-item
-      a.pages-footer-nav-link(href="/mock address/") связь с нами
+     ul.pages-footer-nav-list
+      li.pages-footer-nav-item
+       a.ui-footer-nav-link-first(href="/mock address/") служба поддержки
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") соглашения
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") сообщения
+      li.pages-footer-nav-item
+       a.pages-footer-nav-link(href="/mock address/") связь с нами
 
-  div.footer-subscribe
-    span.ui-footer-nav-link-first подписка
-    p.
-      получайте специальные предложения и новости сервиса
-    +input-field({placeholder: 'Email'})
-     span.material-icons arrow_forward
-    div.way_icon
-     h3.visiually-hidden список социальных сетей
-     ul
-      a.sosial-icon-link(href="/mock me/", aria-label="твиттэр")
-       li i.fab.fa-twitter
-      a.sosial-icon-link(href="/mock me/", aria-label="фэйсбук")
-       li i.fab.fa-facebook-f
-      a.sosial-icon-link(href="/mock me/", aria-label="инстаграмм")
-       li i.fab.fa-instagram
+   div.footer-subscribe
+     span.ui-footer-nav-link-first подписка
+     p.
+       получайте специальные предложения и новости сервиса
+     +input-field({placeholder: 'Email'})
+      span.material-icons arrow_forward
+     div.way_icon
+      h3.visiually-hidden список социальных сетей
+      ul
+       a.sosial-icon-link(href="/mock me/", aria-label="твиттэр")
+        li i.fab.fa-twitter
+       a.sosial-icon-link(href="/mock me/", aria-label="фэйсбук")
+        li i.fab.fa-facebook-f
+       a.sosial-icon-link(href="/mock me/", aria-label="инстаграмм")
+        li i.fab.fa-instagram
 
 
